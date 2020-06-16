@@ -1,0 +1,196 @@
+{
+    "code": 200,
+    "data": {
+        "content": {
+            "slides": [
+                {
+                    "groesze": "h1",
+                    "modifizierer": "",
+                    "schnitt": "",
+                    "ordnung": "h1",
+                    "title": "Messes Make Memories",
+                    "text": "Some people find it hard to find the right perfume. This may smell good when this is sprayed into the air but this changes when this reacts with the skin.",
+                    "fade": "fade-3",
+                    "hintergrund": "kenBurns",
+                    "hoehe": "auto",
+                    "abstand": "cropTop",
+                    "hintergrund_bild": [
+                        {
+                            "filename": "img-10.jpg",
+                            "dragText": "(image: img-10.jpg)",
+                            "icon": {
+                                "type": "file-image",
+                                "ratio": "3/2",
+                                "back": "pattern",
+                                "color": "#de935f",
+                                "cover": false,
+                                "url": "http://localhost:8888/kirby/media/pages/test/2152966073-1590751450/img-10.jpg",
+                                "cards": {
+                                    "url": "data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw",
+                                    "srcset": "http://localhost:8888/kirby/media/pages/test/2152966073-1590751450/img-10-352x.jpg 352w, http://localhost:8888/kirby/media/pages/test/2152966073-1590751450/img-10-864x.jpg 864w, http://localhost:8888/kirby/media/pages/test/2152966073-1590751450/img-10-1408x.jpg 1408w"
+                                },
+                                "list": {
+                                    "url": "data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw",
+                                    "srcset": "http://localhost:8888/kirby/media/pages/test/2152966073-1590751450/img-10-38x38.jpg 1x, http://localhost:8888/kirby/media/pages/test/2152966073-1590751450/img-10-76x76.jpg 2x"
+                                }
+                            },
+                            "id": "test/img-10.jpg",
+                            "image": {
+                                "ratio": "3/2",
+                                "back": "pattern",
+                                "cover": false,
+                                "url": "http://localhost:8888/kirby/media/pages/test/2152966073-1590751450/img-10.jpg",
+                                "cards": {
+                                    "url": "data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw",
+                                    "srcset": "http://localhost:8888/kirby/media/pages/test/2152966073-1590751450/img-10-352x.jpg 352w, http://localhost:8888/kirby/media/pages/test/2152966073-1590751450/img-10-864x.jpg 864w, http://localhost:8888/kirby/media/pages/test/2152966073-1590751450/img-10-1408x.jpg 1408w"
+                                },
+                                "list": {
+                                    "url": "data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw",
+                                    "srcset": "http://localhost:8888/kirby/media/pages/test/2152966073-1590751450/img-10-38x38.jpg 1x, http://localhost:8888/kirby/media/pages/test/2152966073-1590751450/img-10-76x76.jpg 2x"
+                                }
+                            },
+                            "info": "",
+                            "link": "/pages/test/files/img-10.jpg",
+                            "text": "img-10.jpg",
+                            "type": "image",
+                            "url": "http://localhost:8888/kirby/media/pages/test/2152966073-1590751450/img-10.jpg",
+                            "uuid": "img-10.jpg"
+                        }
+                    ],
+                    "_key": "slide10",
+                    "line-a": null,
+                    "line-b": null,
+                    "_uid": "slide10_1590751410630_967"
+                },
+                {
+                    "groesze": "h1",
+                    "modifizierer": "small",
+                    "schnitt": "",
+                    "ordnung": "h1",
+                    "title": "One of the tragedies of the design scene is that it always acts too late",
+                    "text": "He takes snapshots, makes notes and records impressions on tablecloths or newspapers, on backs of envelopes or matchbooks. Why one thing and not another is part of the mystery, but he is omnivorous.",
+                    "button1_text": "Get Started",
+                    "button1_url": "http://localhost:8888/",
+                    "button1_fenster": "target='_blank'",
+                    "button1_nachverfolgung": "",
+                    "button1_stil": "solid",
+                    "button1_groesse": "big",
+                    "button1_material_icon": "accessibility_new",
+                    "button1_position": "left",
+                    "button1_farbe": "blue",
+                    "button2_text": "Learn More",
+                    "button2_url": "",
+                    "button2_fenster": "",
+                    "button2_nachverfolgung": "",
+                    "button2_stil": "",
+                    "button2_groesse": "",
+                    "button2_material_icon": "",
+                    "button2_position": "",
+                    "button2_farbe": "",
+                    "fade": "",
+                    "hintergrund": "kenBurns",
+                    "hoehe": "auto",
+                    "abstand": "cropTop",
+                    "hintergrund_bild": [
+                        {
+                            "filename": "img-11.jpg",
+                            "dragText": "(image: img-11.jpg)",
+                            "icon": {
+                                "type": "file-image",
+                                "ratio": "3/2",
+                                "back": "pattern",
+                                "color": "#de935f",
+                                "cover": false,
+                                "url": "http://localhost:8888/kirby/media/pages/test/3174272521-1590751177/img-11.jpg",
+                                "cards": {
+                                    "url": "data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw",
+                                    "srcset": "http://localhost:8888/kirby/media/pages/test/3174272521-1590751177/img-11-352x.jpg 352w, http://localhost:8888/kirby/media/pages/test/3174272521-1590751177/img-11-864x.jpg 864w, http://localhost:8888/kirby/media/pages/test/3174272521-1590751177/img-11-1408x.jpg 1408w"
+                                },
+                                "list": {
+                                    "url": "data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw",
+                                    "srcset": "http://localhost:8888/kirby/media/pages/test/3174272521-1590751177/img-11-38x38.jpg 1x, http://localhost:8888/kirby/media/pages/test/3174272521-1590751177/img-11-76x76.jpg 2x"
+                                }
+                            },
+                            "id": "test/img-11.jpg",
+                            "image": {
+                                "ratio": "3/2",
+                                "back": "pattern",
+                                "cover": false,
+                                "url": "http://localhost:8888/kirby/media/pages/test/3174272521-1590751177/img-11.jpg",
+                                "cards": {
+                                    "url": "data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw",
+                                    "srcset": "http://localhost:8888/kirby/media/pages/test/3174272521-1590751177/img-11-352x.jpg 352w, http://localhost:8888/kirby/media/pages/test/3174272521-1590751177/img-11-864x.jpg 864w, http://localhost:8888/kirby/media/pages/test/3174272521-1590751177/img-11-1408x.jpg 1408w"
+                                },
+                                "list": {
+                                    "url": "data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw",
+                                    "srcset": "http://localhost:8888/kirby/media/pages/test/3174272521-1590751177/img-11-38x38.jpg 1x, http://localhost:8888/kirby/media/pages/test/3174272521-1590751177/img-11-76x76.jpg 2x"
+                                }
+                            },
+                            "info": "",
+                            "link": "/pages/test/files/img-11.jpg",
+                            "text": "img-11.jpg",
+                            "type": "image",
+                            "url": "http://localhost:8888/kirby/media/pages/test/3174272521-1590751177/img-11.jpg",
+                            "uuid": "img-11.jpg"
+                        }
+                    ],
+                    "_key": "slide11",
+                    "line-a": null,
+                    "line-b": null,
+                    "line-c": null,
+                    "_uid": "slide11_1590757167993_1472"
+                },
+                {
+                    "groesze": "h1",
+                    "modifizierer": "",
+                    "schnitt": "",
+                    "ordnung": "h1",
+                    "title": "Designers are meant to be loved, not to be understood.",
+                    "text": "He takes snapshots, makes notes and records impressions on tablecloths or newspapers, on backs of envelopes or matchbooks. Why one thing and not another is part of the mystery, but he is omnivorous.",
+                    "button1_text": "Get Started",
+                    "button1_url": "http://localhost:8888",
+                    "button1_fenster": "target='_blank'",
+                    "button1_nachverfolgung": "follow",
+                    "button1_stil": "outline'",
+                    "button1_groesse": "",
+                    "button1_material_icon": "accessibility",
+                    "button1_position": "left",
+                    "button1_farbe": "",
+                    "fade": "",
+                    "hintergrund": "",
+                    "hoehe": "",
+                    "abstand": "",
+                    "hintergrund_bild": [],
+                    "_key": "slide12",
+                    "line-a": null,
+                    "line-b": null,
+                    "line-c": null,
+                    "_uid": "slide12_1591260182259_1338"
+                }
+            ]
+        },
+        "id": "test",
+        "num": 5,
+        "options": {
+            "changeSlug": true,
+            "changeStatus": true,
+            "changeTemplate": false,
+            "changeTitle": false,
+            "create": false,
+            "delete": false,
+            "duplicate": true,
+            "read": true,
+            "preview": true,
+            "sort": false,
+            "update": false
+        },
+        "parent": null,
+        "slug": "test",
+        "status": "listed",
+        "template": "default",
+        "title": "test",
+        "url": "http://localhost:8888/kirby/test"
+    },
+    "status": "ok",
+    "type": "model"
+}
