@@ -4,7 +4,6 @@ import Heading from './fields/Heading';
 import Text from './fields/Text';
 import ButtonA from './fields/ButtonA';
 import Img from './fields/Img';
-import VideoThumbnail from './fields/VideoThumbnail';
 class Slide16 extends React.Component {
 
 	render() {
@@ -23,7 +22,9 @@ class Slide16 extends React.Component {
             </li>
             <li class="col-1-12"/>
             <li class="col-6-12">
-              <VideoThumbnail fields={this.props.slide} popupid="16-16"/>
+              <div class="videoThumbnail rounded shadow popupTrigger ae-4 fromCenter margin-bottom-tablet-4" data-popup-id="16-16">
+                <Img fields={this.props.slide} addClass="wide" dataAction=""/>
+              </div>
             </li>
           </ul>
         </div>
@@ -31,20 +32,6 @@ class Slide16 extends React.Component {
 
     </div>
   </Section>
-  <div class="popup autoplay" data-popup-id="16-16">
-  <div class="close"><svg><use xmlnsXlink="http://www.w3.org/1999/xlink" xlinkHref="#close"/></svg></div>
-  <div class="content">
-    <div class="container">
-      <div class="wrap">
-        <div class="fix-10-12">
-          <div class="embedVideo popupContent shadow rounded">
-            <iframe data-src={this.props.slide.youtube_url} allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" title={this.props.slide._key} frameBorder="0" allowFullScreen=""/>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 </React.Fragment>
 
 		);

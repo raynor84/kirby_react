@@ -4,7 +4,9 @@ import Heading from './fields/Heading';
 import Text from './fields/Text';
 import ButtonA from './fields/ButtonA';
 import ButtonB from './fields/ButtonB';
-
+import ButtonC from './fields/ButtonC';
+import ButtonD from './fields/ButtonD';
+import ButtonE from './fields/ButtonE';
 class Slide97 extends React.Component {
 
 	render() {
@@ -40,7 +42,7 @@ class Slide97 extends React.Component {
             <p class="large light align-left cropBottom inline-block">
               <span class="margin-left-10 middle margin-left-phablet-0 title-group-97">Buckridgebury</span>
               <span class="inline-block middle phablet-block margin-top-phablet-1">North Eloisa</span>
-              <ButtonA fields={this.props.slide}/>
+              <ButtonC fields={this.props.slide}/>
             </p>
           </div>
           <div class="frame-97 ae-6">
@@ -48,7 +50,7 @@ class Slide97 extends React.Component {
             <p class="large light align-left cropBottom inline-block">
               <span class="margin-left-10 middle margin-left-phablet-0 title-group-97">Lake Brennonchester</span>
               <span class="inline-block middle phablet-block margin-top-phablet-1">Lake Marinaview</span>
-              <ButtonA fields={this.props.slide}/>
+              <ButtonD fields={this.props.slide}/>
             </p>
           </div>
           <div class="frame-97 ae-7 opacity-5">
@@ -56,7 +58,7 @@ class Slide97 extends React.Component {
             <p class="large light align-left cropBottom inline-block">
               <span class="margin-left-10 middle margin-left-phablet-0 title-group-97">West Keaganstad</span>
               <span class="inline-block middle phablet-block margin-top-phablet-1">South Austen</span>
-              <ButtonA fields={this.props.slide}/>
+              <ButtonE fields={this.props.slide}/>
             </p>
           </div>
         </div>

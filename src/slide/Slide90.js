@@ -5,7 +5,7 @@ import Text from './fields/Text';
 import PopupButton from './fields/PopupButton';
 import ButtonA from './fields/ButtonA';
 import ButtonB from './fields/ButtonB';
-
+import ButtonC from './fields/ButtonC';
 class Slide90 extends React.Component {
 
 	render() {
@@ -38,7 +38,7 @@ class Slide90 extends React.Component {
               <div class="ae-7"><p class="small opacity-8">There is no such thing as simple. Simple is actually hard to achieve.</p></div>
             </li>
             <li class="col-3-12 col-tablet-1-2 col-phone-1-1">
-              <ButtonB fields={this.props.slide}/>
+              <ButtonC fields={this.props.slide}/>
               <h4 class="smaller margin-bottom-1 ae-7">Photography</h4>
               <div class="ae-8"><p class="small opacity-8">Design is a language that makes what was once impossible possible.</p></div>
             </li>

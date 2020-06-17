@@ -17,7 +17,7 @@ class Slide85 extends React.Component {
           <Heading fields={this.props.slide} addClass="margin-bottom-2 ae-1"/>
           <ul class="flex flex-85 fixedSpaces equal ae-2 fromCenter" data-equal-collapse-width="767">
             <li class="col-6-12 col-tablet-1-2 col-phablet-1-1 margin-bottom-2 ae-3">
-              <div class="pad" style={{"background": "#F5FBFE"}}>
+              <div class="pad" style="background: #F5FBFE">
                 <h4 class="smaller margin-bottom-1">Moon</h4>
                 <div class="price ae-5"><span class="currency">$</span>0</div>
                 <div class="ae-5">

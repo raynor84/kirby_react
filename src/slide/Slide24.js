@@ -2,8 +2,6 @@ import React from 'react';
 import Section from './Section';
 import Heading from './fields/Heading';
 import Text from './fields/Text';
-import Subtitle from './fields/Subtitle';
-import BlockText from './fields/BlockText';
 class Slide24 extends React.Component {
 
 	render() {
@@ -15,9 +13,9 @@ class Slide24 extends React.Component {
         
         <div class="fix-8-12">
           <Heading fields={this.props.slide} addClass="margin-bottom-2 ae-1 fromCenter"/>
-          <div class="ae-3"><Subtitle fields={this.props.slide} addClass="light margin-bottom-3 opacity-8"/></div>
+          <div class="ae-3"><Text fields={this.props.slide} addClass="light margin-bottom-3 opacity-8"/></div>
           <div class="left ae-5 cropBottom">
-            <BlockText fields={this.props.slide} addClass="opacity-8" />
+            <p class="opacity-8">I'm not like most designers, who have to set sail on an exotic getaway to get inspired. Most of the time, it's on my walk to work, or sitting in the subway and seeing something random or out of context. Simplicity is not the absence of clutter; that's a consequence of simplicity. Simplicity is somehow essentially describing the purpose and place of an object and product.</p>
           </div>
         </div>
         

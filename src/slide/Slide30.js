@@ -2,12 +2,9 @@ import React from 'react';
 import Section from './Section';
 import Heading from './fields/Heading';
 import Text from './fields/Text';
-import Text2 from './fields/Text2';
-
 class Slide30 extends React.Component {
 
 	render() {
-    
 		return (
 <React.Fragment>
   <Section slide={this.props.slide}>
@@ -21,15 +18,10 @@ class Slide30 extends React.Component {
           </div>
 
           <ul class="flex margin-top-4">
-            {this.props.slide.list.map(function(item, index){
-             
-              return (<li key={item._uid} class="col-3-12 margin-bottom-1 left ae-3">
-                <Heading key={index} fields={item} />
-                <Text  key={index+"A"} addClass="small " fields={item} />
-              </li>);
-            })
-          }
-
+            <li class="col-3-12 margin-bottom-1 left ae-3">
+              <h4 class="smallest">Meet Quick</h4>
+              <p class="small opacity-8">I think it's really important to design things with a kind of personality.</p>
+            </li>
             <li class="col-3-12 margin-bottom-1 left ae-4">
              <h4 class="smallest">Better Interface</h4>
               <p class="small opacity-8">Designers are very fickle. I never wanted to be a victim of that.</p>

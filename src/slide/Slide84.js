@@ -4,7 +4,8 @@ import Heading from './fields/Heading';
 import Text from './fields/Text';
 import ButtonA from './fields/ButtonA';
 import ButtonB from './fields/ButtonB';
-
+import ButtonC from './fields/ButtonC';
+import ButtonD from './fields/ButtonD';
 class Slide84 extends React.Component {
 
 	render() {
@@ -17,7 +18,7 @@ class Slide84 extends React.Component {
         <div class="fix-12-12">
           <Heading fields={this.props.slide} addClass="margin-bottom-2 ae-1"/>
           <ul class="flex flex-84 noSpaces equal equalMobile ae-2 fromCenter">
-            <li class="col-3-12 ae-3" style={{"background": "#F5FBFE"}}>
+            <li class="col-3-12 ae-3" style="background: #F5FBFE">
               <h4 class="smaller margin-bottom-1">Moon</h4>
               <div class="price ae-5"><span class="currency">$</span>0</div>
               <div class="ae-5">
@@ -63,7 +64,7 @@ class Slide84 extends React.Component {
                   <li class="opacity-8">24/7 Customer Support</li>
                 </ul>
               </div>
-              <ButtonB fields={this.props.slide}/>
+              <ButtonC fields={this.props.slide}/>
             </li>
             <li class="col-3-12 ae-5">
               <h4 class="smaller margin-bottom-1">Galaxy</h4>
@@ -81,7 +82,7 @@ class Slide84 extends React.Component {
                   <li class="opacity-8">24/7 Customer Support</li>
                 </ul>
               </div>
-              <ButtonB fields={this.props.slide}/>
+              <ButtonD fields={this.props.slide}/>
             </li>
           </ul>
         </div> 

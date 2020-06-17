@@ -14,7 +14,7 @@ class Slide41 extends React.Component {
         <div class="fix-7-12 center">
           <Text fields={this.props.slide} addClass="largest light ae-1"/>
           <div class="fix-4-12 margin-top-4">
-            <a href="#asd" class="author block">
+            <a href="#" class="author block">
               <Img fields={this.props.slide} addClass="round ae-2 fromCenter margin-bottom-1" dataAction=""/>
               <h4 class="smaller margin-bottom-1 ae-3">Frank Gehry</h4>
               <p class="ae-4"><span class="opacity-8">Canadian architect<br/>Gehry Partners</span></p>

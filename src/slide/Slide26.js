@@ -1,22 +1,11 @@
 import React from 'react';
 import Section from './Section';
 import Heading from './fields/Heading';
-import Heading2 from './fields/Heading2';
 import Text from './fields/Text';
-import Text2 from './fields/Text2';
 import Img from './fields/Img';
 class Slide26 extends React.Component {
 
 	render() {
-
-    let dots = [];
-    for(let i=0; i<this.props.slide.gallery.length; i++) {
-      if(i===0) {
-        dots.push(<li class="dot selected"></li>);
-      } else {
-        dots.push(<li class="dot"></li>);
-      }
-    }
 		return (
 <React.Fragment>
   <Section slide={this.props.slide}>
@@ -33,10 +22,9 @@ class Slide26 extends React.Component {
               <div class="relative">
                 <Img fields={this.props.slide} addClass="round app-26 ae-3 fromCenter" dataAction=""/>
                 <div class="text-26">
-                <Heading2 fields={this.props.slide} addClass="fromRight ae-3"/>
-                  
+                  <h4 class="small ae-3 fromRight">Ember for Apple Watch</h4>
                   <div class="ae-5 fromRight">
-                    <Text2 fields={this.props.slide} addClass="small opacity-8" />
+                    <p class="small opacity-8">People don&#x2019;t use a product<br/>because of the great&#xA0;design.</p>
                   </div>
                 </div>
               </div>
@@ -44,12 +32,16 @@ class Slide26 extends React.Component {
             <li class="col-5-12">
               <div class="fix-4-12 center">
                 <ul class="slider clickable ae-1 fromAbove" data-slider-id="26-26">
-                {this.props.slide.gallery.map(function(image, index) {
-            return <li class={index=== 0 ? "selected": ""}><Img key={index} imageField={image} addClass="" dataAction=""/></li>
-            })}
+                  <li class="selected"><Img fields={this.props.slide} addClass="" dataAction=""/></li>
+                  <li><Img fields={this.props.slide} addClass="" dataAction=""/></li>
+                  <li><Img fields={this.props.slide} addClass="" dataAction=""/></li>
+                  <li><Img fields={this.props.slide} addClass="" dataAction=""/></li>
                 </ul>
                 <ul class="controller dots ae-3 fromCenter margin-top-3" data-slider-id="26-26">
-                  {dots}
+                  <li class="dot selected"/>
+                  <li class="dot"/>
+                  <li class="dot"/>
+                  <li class="dot"/>
                 </ul>
               </div>
             </li>

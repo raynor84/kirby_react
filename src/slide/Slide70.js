@@ -3,6 +3,7 @@ import Section from './Section';
 import Text from './fields/Text';
 import ButtonA from './fields/ButtonA';
 import ButtonB from './fields/ButtonB';
+import ButtonC from './fields/ButtonC';
 import Img from './fields/Img';
 class Slide70 extends React.Component {
 
@@ -50,7 +51,7 @@ class Slide70 extends React.Component {
                   <p class="smaller bold uppercase opacity-4 margin-bottom-1 margin-top-0">Music</p>
                   <h4 class="small margin-bottom-1">Headphones</h4>
                   <p class="small opacity-8 margin-bottom-2 equalElement">It&#x2019;s all fun and games until someone breaks a&#xA0;link.</p>
-                  <ButtonB fields={this.props.slide}/>
+                  <ButtonC fields={this.props.slide}/>
                 </div>
               </div>
             </li>
