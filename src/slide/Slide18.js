@@ -16,15 +16,15 @@ class Slide18 extends React.Component {
         <div class="fix-12-12 left">
           <div class="fix-5-12 toLeft">
             <Heading fields={this.props.slide} addClass="margin-bottom-2"/>
-            <Text fields={this.props.slide}/>
-            <VideoThumbnail fields={this.props.slide} popupid="18-2"/>
+            <Text fields={this.props.slide} addClass="ae-2 fromRight large"/>
+            <VideoThumbnail fields={this.props.slide} popupid="18-18"/>
           </div>
         </div>
 
       </div>
     </div>
   </Section>
-  <div class="popup autoplay" data-popup-id="18-2">
+  <div class="popup autoplay" data-popup-id="18-18">
   <div class="close"><svg><use xmlnsXlink="http://www.w3.org/1999/xlink" xlinkHref="#close"/></svg></div>
   <div class="content">
     <div class="container">

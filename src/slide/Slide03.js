@@ -16,7 +16,7 @@ class Slide03 extends React.Component {
             <Logo fields={this.props.slide}/>
           </div>
           <div class="fix-6-12"> 
-            <Text fields={this.props.slide}/>
+            <Text fields={this.props.slide} addClass="large cropBottom ae-2"/>
           </div>
         </div>
           

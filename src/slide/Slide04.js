@@ -1,7 +1,8 @@
 import React from 'react';
 import Section from './Section';
 import Logo from './fields/Logo';
-import PopupButton from './fields/PopupButton';
+import Img from './fields/Img';
+import VideoThumbnail from './fields/VideoThumbnail';
 class Slide04 extends React.Component {
 
 	render() {
@@ -15,7 +16,7 @@ class Slide04 extends React.Component {
           <div class="fix-3-12 margin-bottom-5">
             <Logo fields={this.props.slide}/>
           </div>
-          <PopupButton fields={this.props.slide} popupid="4"/>
+          <VideoThumbnail fields={this.props.slide} popupid="4"/>
         </div>
 
       </div>

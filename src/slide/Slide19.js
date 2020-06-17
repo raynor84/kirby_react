@@ -15,7 +15,7 @@ class Slide19 extends React.Component {
       
         <div class="fix-7-12">
           <Heading fields={this.props.slide} addClass="margin-bottom-2 ae-1"/>
-          <Text fields={this.props.slide}/>
+          <Text fields={this.props.slide} addClass="largest light ae-2"/>
           <ButtonA fields={this.props.slide}/><ButtonB fields={this.props.slide}/>
         </div>
       

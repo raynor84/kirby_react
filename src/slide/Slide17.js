@@ -3,6 +3,7 @@ import Section from './Section';
 import Heading from './fields/Heading';
 import Text from './fields/Text';
 import ButtonA from './fields/ButtonA';
+import Img from './fields/Img';
 import VideoThumbnail from './fields/VideoThumbnail';
 class Slide17 extends React.Component {
 
@@ -16,12 +17,12 @@ class Slide17 extends React.Component {
         <div class="fix-12-12">
           <ul class="flex fixedSpaces">
             <li class="col-6-12">
-              <VideoThumbnail fields={this.props.slide} popupid="17-6"/>
+              <VideoThumbnail fields={this.props.slide} popupid="17-17"/>
             </li>
             <li class="col-1-12"/>
             <li class="col-5-12 left">
               <Heading fields={this.props.slide} addClass="margin-top-1 margin-bottom-2 ae-2 fromRight"/>
-              <Text fields={this.props.slide}/>
+              <Text fields={this.props.slide} addClass="large ae-3 fromRight"/>
               <ButtonA fields={this.props.slide}/>
             </li>
           </ul>
@@ -30,7 +31,7 @@ class Slide17 extends React.Component {
 
     </div>
   </Section>
-  <div class="popup autoplay" data-popup-id="17-6">
+  <div class="popup autoplay" data-popup-id="17-17">
   <div class="close"><svg><use xmlnsXlink="http://www.w3.org/1999/xlink" xlinkHref="#close"/></svg></div>
   <div class="content">
     <div class="container">
