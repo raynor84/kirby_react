@@ -1,6 +1,8 @@
 import React from 'react';
 import Section from './Section';
-
+import Heading from './fields/Heading';
+import Text from './fields/Text';
+import BlockText from './fields/BlockText';
 class Slide49 extends React.Component {
 
 	render() {
@@ -11,33 +13,24 @@ class Slide49 extends React.Component {
       <div class="wrap">
       
         <div class="fix-8-12 toCenter">
-          <h1 class="smaller margin-bottom-2 ae-1">Design is the silent ambassador of your&nbsp;brand.</h1>
-          <p class="large ae-2"><span class="opacity-8">I shall sing that first line twice, and perhaps if I sing it very quickly, I shall find myself singing the third and fourth lines before I have time to think of them, and that will be a Good Song. You cannot not&nbsp;communicate.</span></p>
+          <Heading fields={this.props.slide} addClass="margin-bottom-2 ae-1" />
+          <Text fields={this.props.slide} addClass="large ae-2" />
         </div>
         <div class="fix-10-12 margin-top-4">  
           <ul class="flex flex-49 later equal">
-            <li class="col-4-12">
-              <div class="fix-3-12">
-                <i class="material-icons ae-3 fromCenter">voice_chat</i>
-                <h4 class="small margin-bottom-1 equalElement ae-4">Video calls</h4>
-                <div class="ae-5"><p class="opacity-8">Design is so critical it should be on the agenda of every meeting.</p>
-              </div>
-              </div>
-            </li>
-            <li class="col-4-12">
-              <div class="fix-3-12 ae-4">
-                <i class="material-icons fromCenter">account_box</i>
-                <h4 class="small margin-bottom-1 equalElement ae-5">Experience</h4>
-                <div class="ae-6"><p class="opacity-8">Space and light and order. Those are the things that men.</p></div>
-              </div>
-            </li>
-            <li class="col-4-12">
-              <div class="fix-3-12 ae-5">
-                <i class="material-icons fromCenter">near_me</i>
-                <h4 class="small margin-bottom-1 equalElement ae-6">Geo location</h4>
-                <div class="ae-7"><p class="opacity-8">Design is not making beauty, beauty emerges from selection.</p></div>
-              </div>
-            </li>
+          {this.props.slide.list.map(function(fields, index) {
+            return (
+              <li class="col-4-12">
+                <div class="fix-3-12">
+                  <i class="material-icons ae-3 fromCenter">{fields.material_icon}</i>
+                  <Heading fields={fields} addClass="margin-bottom-1 equalElement ae-4" />
+                  <div class="ae-5">
+                    <BlockText fields={fields} addClass="opacity-8" />
+                </div>
+                </div>
+              </li>  
+            );
+            })}
           </ul>
         </div>
         

@@ -2,6 +2,7 @@ import React from 'react';
 import Section from './Section';
 import Heading from './fields/Heading';
 import Text from './fields/Text';
+import BlockText from './fields/BlockText';
 class Slide50 extends React.Component {
 
 	render() {
@@ -15,18 +16,18 @@ class Slide50 extends React.Component {
           <Heading fields={this.props.slide} addClass="margin-bottom-3 ae-1"/>
           <Text fields={this.props.slide} addClass="larger light ae-2"/>
           <ul class="flex later margin-top-4">
-            <li class="col-4-12 left ae-3">
-              <h4 class="small margin-bottom-1 ae-4">Meet quick</h4>
-              <div class="ae-5"><p class="small opacity-8">Design is so critical it should be on the agenda of every meeting.</p></div>
+          {this.props.slide.list.map(function(fields, index) {
+            let ae=parseFloat(index)+parseFloat(3);
+            
+            return (
+            <li class={"col-4-12 left ae-"+ae}>
+              <Heading fields={fields} addClass={"margin-bottom-1 ae-"+(ae +1 )} />
+              <div class={"ae-"+(ae+2)}>
+                <BlockText fields={fields} addClass="small opacity-8" />
+               </div>
             </li>
-            <li class="col-4-12 left ae-4">
-              <h4 class="small margin-bottom-1 ae-5">Better interface</h4>
-              <div class="ae-6"><p class="small opacity-8">Space and light and order. Those are the things that men.</p></div>
-            </li>
-            <li class="col-4-12 left ae-5">
-              <h4 class="small margin-bottom-1 ae-6">Listen your mind</h4>
-              <div class="ae-7"><p class="small opacity-8">Design is not making beauty, beauty emerges from selection.</p></div>
-            </li>
+            );
+          })}
           </ul>
         </div>
         
