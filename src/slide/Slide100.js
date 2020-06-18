@@ -16,7 +16,7 @@ class Slide100 extends React.Component {
           <ul class="flex later">
             <li class="col-7-12 left ae-1  flex-slide-100">
 
-              <div class="wrap-img-100" style="background-image: url(assets/img/image-100.jpg);">
+              <div class="wrap-img-100" style={{"backgroundImage": "url(assets/img/image-100.jpg);"}}>
                 <div class="blackout rounded"/>
                 <div class="wrap-text-100 wrap-text-100">
                   <Heading fields={this.props.slide} addClass="margin-bottom-1 ae-2"/>

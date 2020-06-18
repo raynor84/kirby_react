@@ -18,22 +18,16 @@ class Slide33 extends React.Component {
               <Heading fields={this.props.slide} addClass="margin-bottom-2 ae-1 fromLeft"/>
               <Text fields={this.props.slide} addClass="large ae-2 fromLeft"/>
               <ul class="tabs controller uppercase bold ae-3 fromCenter" data-slider-id="31">
-                <li class="selected">Projects</li>
-                <li>Community</li>
-                <li>Learn</li>
+              {this.props.slide.list.map(function(fields, index) {
+            return <li class={index=== 0 ? "selected": ""}>{fields.text}</li>
+            })}
               </ul>
             </li>
             <li class="col-6-12 left ae-4 fromRight">
               <ul class="slider animated" data-slider-id="31">
-                <li class="selected fromRight">
-                  <Img fields={this.props.slide} addClass="ipad-33" dataAction="zoom"/>
-                </li>
-                <li class="fromRight" data-action="zoom">
-                  <Img fields={this.props.slide} addClass="ipad-33" dataAction="zoom"/>
-                </li>
-                <li class="fromRight" data-action="zoom">
-                  <Img fields={this.props.slide} addClass="ipad-33" dataAction="zoom"/>
-                </li>
+              {this.props.slide.list.map(function(fields, index) {
+            return <li class={index=== 0 ? "selected fromRight": "fromRight"}><Img key={index} imageField={fields.image[0]} addClass="ipad-33" dataAction="zoom"/></li>
+            })}
               </ul>
             </li>
           </ul>

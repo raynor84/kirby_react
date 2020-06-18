@@ -20,7 +20,7 @@ class Slide34 extends React.Component {
               <div class="fix-5-12 toLeft margin-left-tablet-auto margin-right-tablet-auto">
                 <Heading fields={this.props.slide} addClass="margin-bottom-2"/>
                 <Text fields={this.props.slide} addClass="ae-2 fromLeft large margin-bottom-4"/>
-                <ButtonA fields={this.props.slide}/><ButtonB fields={this.props.slide}/>
+                <ButtonA fields={this.props.slide} addClass="cropLeft wideForPhone"/><ButtonB fields={this.props.slide}/>
               </div>
             </li>
             <li class="col-6-12">

@@ -14,7 +14,7 @@ class Slide98 extends React.Component {
         <div class="fix-12-12 ae-1">
           <div class="swiper-98">
             <div class="swiper-wrapper">
-              <a href="#" class="box-98 swiper-slide noText">
+              <a href="#asdf" class="box-98 swiper-slide noText">
                 <div class="relative text-white disableSelect">
                   <Img fields={this.props.slide} addClass="wide rounded" dataAction=""/>
                   <Text fields={this.props.slide} addClass="smallest uppercase bold title-slide-98 opacity-8"/>
@@ -22,7 +22,7 @@ class Slide98 extends React.Component {
                   <div class="blackout-98"/>
                 </div>
               </a>
-              <a href="#" class="box-98 swiper-slide noText">
+              <a href="#asdf" class="box-98 swiper-slide noText">
                 <div class="relative text-white disableSelect">
                   <Img fields={this.props.slide} addClass="wide rounded" dataAction=""/>
                   <p class="smallest uppercase bold title-slide-98 opacity-8">Gallery</p>
@@ -30,7 +30,7 @@ class Slide98 extends React.Component {
                   <div class="blackout-98"/>
                 </div>
               </a>
-              <a href="#" class="box-98 swiper-slide noText">
+              <a href="#asdf" class="box-98 swiper-slide noText">
                 <div class="relative text-white disableSelect">
                   <Img fields={this.props.slide} addClass="wide rounded" dataAction=""/>
                   <p class="smallest uppercase bold title-slide-98 opacity-8">Exhibition</p>
@@ -38,7 +38,7 @@ class Slide98 extends React.Component {
                   <div class="blackout-98"/>
                 </div>
               </a>
-              <a href="#" class="box-98 swiper-slide noText">
+              <a href="#asdf" class="box-98 swiper-slide noText">
                 <div class="relative text-white disableSelect">
                   <Img fields={this.props.slide} addClass="wide rounded" dataAction=""/>
                   <p class="smallest uppercase bold title-slide-98 opacity-8">Display</p>
@@ -46,7 +46,7 @@ class Slide98 extends React.Component {
                   <div class="blackout-98"/>
                 </div>
               </a>
-              <a href="#" class="box-98 swiper-slide noText">
+              <a href="#asdf" class="box-98 swiper-slide noText">
                 <div class="relative text-white disableSelect">
                   <Img fields={this.props.slide} addClass="wide rounded" dataAction=""/>
                   <p class="smallest uppercase bold title-slide-98 opacity-8">Gallery</p>
@@ -54,7 +54,7 @@ class Slide98 extends React.Component {
                   <div class="blackout-98"/>
                 </div>
               </a>
-              <a href="#" class="box-98 swiper-slide noText">
+              <a href="#asdf" class="box-98 swiper-slide noText">
                 <div class="relative text-white disableSelect">
                   <Img fields={this.props.slide} addClass="wide rounded" dataAction=""/>
                   <p class="smallest uppercase bold title-slide-98 opacity-8">Exhibition</p>

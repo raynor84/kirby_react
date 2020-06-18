@@ -2,6 +2,7 @@ import React from 'react';
 import Section from './Section';
 import Heading from './fields/Heading';
 import Text from './fields/Text';
+import Text2 from './fields/Text2';
 import Img from './fields/Img';
 class Slide35 extends React.Component {
 
@@ -16,10 +17,11 @@ class Slide35 extends React.Component {
           <Img fields={this.props.slide} addClass="round margin-bottom-1 ae-1 fromCenter" dataAction=""/>
           <Text fields={this.props.slide} addClass="large margin-bottom-2 ae-2"/>
           <Heading fields={this.props.slide} addClass="margin-bottom-3 ae-3"/>
-          <p class="larger light ae-4 "><span class="opacity-8">Take a walk. Dance a jig. Get some sun. Don&#x2019;t take yourself too serious. Cook something ethnic. Play the 3 chords you know on guitar. Go get&#xA0;coffee.</span></p>
+          <Text2 fields={this.props.slide} addClass="larger light ae-4 opacity-8 "/>
+         
         </div>
         <div class="fix-12-12 ae-5">
-          <Img fields={this.props.slide} addClass="iphone-35 margin-top-2" dataAction="zoom"/>
+          <Img fields={this.props.slide} imageField={this.props.slide.image1[0]} addClass="iphone-35 margin-top-2" dataAction="zoom"/>
         </div>
         
       </div>

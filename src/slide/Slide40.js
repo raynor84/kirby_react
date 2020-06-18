@@ -1,7 +1,7 @@
 import React from 'react';
 import Section from './Section';
 import Heading from './fields/Heading';
-import Text from './fields/Text';
+import BlockText from './fields/BlockText';
 class Slide40 extends React.Component {
 
 	render() {
@@ -12,8 +12,8 @@ class Slide40 extends React.Component {
       <div class="wrap">
         
         <div class="fix-6-12 toLeft left ae-1">
-          <Text fields={this.props.slide} addClass="opacity-7 large margin-bottom-2"/>
-          <Heading fields={this.props.slide} addClass=""/>
+          <BlockText fields={this.props.slide} addClass="opacity-7 large margin-bottom-2"/>
+          <Heading fields={this.props.slide} addClass="crop"/>
         </div>
 
       </div>

@@ -30,7 +30,7 @@ class Slide31 extends React.Component {
               </div>
             </li>
             <li class="col-6-12 left ae-1">
-              <Img fields={this.props.slide} addClass="ipad-31 margin-bottom-tablet-4" dataAction="zoom"/>
+              <Img imageField={this.props.slide.image2[0]} addClass="ipad-31 margin-bottom-tablet-4" dataAction="zoom"/>
             </li>
           </ul>
         </div>

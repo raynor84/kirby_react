@@ -2,6 +2,7 @@ import React from 'react';
 import Section from './Section';
 import Heading from './fields/Heading';
 import Text from './fields/Text';
+import Text2 from './fields/Text2';
 import Img from './fields/Img';
 class Slide36 extends React.Component {
 
@@ -16,10 +17,17 @@ class Slide36 extends React.Component {
           <Img fields={this.props.slide} addClass="round margin-bottom-1 ae-1 fromCenter" dataAction=""/>
           <Text fields={this.props.slide} addClass="ae-2 large margin-bottom-2"/>
           <Heading fields={this.props.slide} addClass="margin-bottom-2"/>
-          <p class="ae-4 large margin-bottom-4"><span class="opacity-8">To create anything&#x2013;whether a short story or a magazine profile or a film or a sitcom&#x2013;is to believe, if only momentarily, you are capable of&#xA0;magic.</span></p>
+          <Text2 fields={this.props.slide} addClass="ae-4 large margin-bottom-4 opacity-8"/>
         </div>
         <div class="fix-10-12 ae-5">
-          <Img fields={this.props.slide} addClass="ipad-36" dataAction="zoom"/>
+          <Img 
+            fields={this.props.slide} 
+            imageField={this.props.slide.image1[0]}
+            imageAlt={this.props.slide.image1_alternativtext}
+            imageWidth={this.props.slide.image1_width}
+            imageHeight={this.props.slide.image1_height}
+            addClass="ipad-36" 
+            dataAction="zoom"/>
         </div>
         
       </div>

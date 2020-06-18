@@ -5,6 +5,7 @@ import Text from './fields/Text';
 import ButtonA from './fields/ButtonA';
 import ButtonB from './fields/ButtonB';
 import Img from './fields/Img';
+import VideoThumbnail from './fields/VideoThumbnail';
 class Slide46 extends React.Component {
 
 	render() {
@@ -26,7 +27,7 @@ class Slide46 extends React.Component {
               <div class="ae-5"><p class="opacity-8">Art is making something out of nothing and selling it.</p></div>
             </li>
             <li class="col-4-12 box-46">
-              <div class="videoThumbnail rounded shadow video-46 popupTrigger toLeft ae-4" data-popup-id="46-46"><Img fields={this.props.slide} addClass="rounded" dataAction=""/></div>
+              <VideoThumbnail fields={this.props.slide} popupid="46-46"/>
               <h4 class="equalElement smaller margin-top-3 margin-bottom-1 ae-5">Information</h4>
               <div class="ae-6"><p class="opacity-8">Designers are very fickle. I never wanted to be a victim of that.</p></div>
             </li>
@@ -41,6 +42,20 @@ class Slide46 extends React.Component {
       </div>
     </div>
   </Section>
+  <div class="popup autoplay" data-popup-id="46-46">
+  <div class="close"><svg><use xmlnsXlink="http://www.w3.org/1999/xlink" xlinkHref="#close"/></svg></div>
+  <div class="content">
+    <div class="container">
+      <div class="wrap">
+        <div class="fix-10-12">
+          <div class="embedVideo popupContent shadow rounded">
+            <iframe data-src={this.props.slide.youtube_url} allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" title={this.props.slide._key} frameBorder="0" allowFullScreen=""/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 </React.Fragment>
 
 		);

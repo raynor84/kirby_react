@@ -14,7 +14,7 @@ class Slide99 extends React.Component {
         <div class="fix-12-12 ae-1">
           <div class="swiper-99">
             <div class="swiper-wrapper">
-              <a href="#" class="box-99 swiper-slide noText cursorGrab">
+              <a href="#asdf" class="box-99 swiper-slide noText cursorGrab">
                 <div class="thumbnail-99 text-white disableSelect">
                   <Img fields={this.props.slide} addClass="wide rounded" dataAction=""/>
                   <h4 class="smaller title-slide-99">How to start a fide in the wet forest</h4>
@@ -22,7 +22,7 @@ class Slide99 extends React.Component {
                   <div class="blackout-99 rounded"/>
                 </div>
               </a>
-              <a href="#" class="box-99 swiper-slide noText cursorGrab">
+              <a href="#asdf" class="box-99 swiper-slide noText cursorGrab">
                 <div class="thumbnail-99 text-white disableSelect">
                   <Img fields={this.props.slide} addClass="wide rounded" dataAction=""/>
                   <h4 class="smaller title-slide-99">How to find a cover in the dust storm</h4>
@@ -30,7 +30,7 @@ class Slide99 extends React.Component {
                   <div class="blackout-99 rounded"/>
                 </div>
               </a>
-              <a href="#" class="box-99 swiper-slide noText cursorGrab">
+              <a href="#asdf" class="box-99 swiper-slide noText cursorGrab">
                 <div class="thumbnail-99 text-white disableSelect">
                   <Img fields={this.props.slide} addClass="wide rounded" dataAction=""/>
                   <h4 class="smaller title-slide-99">How to make a quick shelter in a mountain</h4>
@@ -38,7 +38,7 @@ class Slide99 extends React.Component {
                   <div class="blackout-99 rounded"/>
                 </div>
               </a>
-              <a href="#" class="box-99 swiper-slide noText cursorGrab">
+              <a href="#asdf" class="box-99 swiper-slide noText cursorGrab">
                 <div class="thumbnail-99 text-white disableSelect">
                   <Img fields={this.props.slide} addClass="wide rounded" dataAction=""/>
                   <h4 class="smaller title-slide-99">Practical tricks to stay afloat in water</h4>
@@ -46,7 +46,7 @@ class Slide99 extends React.Component {
                   <div class="blackout-99 rounded"/>
                 </div>
               </a>
-              <a href="#" class="box-99 swiper-slide noText cursorGrab">
+              <a href="#asdf" class="box-99 swiper-slide noText cursorGrab">
                 <div class="thumbnail-99 text-white disableSelect">
                   <Img fields={this.props.slide} addClass="wide rounded" dataAction=""/>
                   <h4 class="smaller title-slide-99">How to start a fide in the wet forest</h4>
@@ -54,7 +54,7 @@ class Slide99 extends React.Component {
                   <div class="blackout-99 rounded"/>
                 </div>
               </a>
-              <a href="#" class="box-99 swiper-slide noText cursorGrab">
+              <a href="#asdf" class="box-99 swiper-slide noText cursorGrab">
                 <div class="thumbnail-99 text-white disableSelect">
                   <Img fields={this.props.slide} addClass="wide rounded" dataAction=""/>
                   <h4 class="smaller title-slide-99">How to find a cover in the dust storm</h4>
@@ -62,7 +62,7 @@ class Slide99 extends React.Component {
                   <div class="blackout-99 rounded"/>
                 </div>
               </a>
-              <a href="#" class="box-99 swiper-slide noText cursorGrab">
+              <a href="#asdf" class="box-99 swiper-slide noText cursorGrab">
                 <div class="thumbnail-99 text-white disableSelect">
                   <Img fields={this.props.slide} addClass="wide rounded" dataAction=""/>
                   <h4 class="smaller title-slide-99">How to make a quick shelter in a mountain</h4>
@@ -70,7 +70,7 @@ class Slide99 extends React.Component {
                   <div class="blackout-99 rounded"/>
                 </div>
               </a>
-              <a href="#" class="box-99 swiper-slide noText cursorGrab">
+              <a href="#asdf" class="box-99 swiper-slide noText cursorGrab">
                 <div class="thumbnail-99 text-white disableSelect">
                   <Img fields={this.props.slide} addClass="wide rounded" dataAction=""/>
                   <h4 class="smaller title-slide-99">Practical tricks to stay afloat in water</h4>

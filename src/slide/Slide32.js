@@ -2,6 +2,7 @@ import React from 'react';
 import Section from './Section';
 import Heading from './fields/Heading';
 import Text from './fields/Text';
+import BlockText from './fields/BlockText';
 import Img from './fields/Img';
 class Slide32 extends React.Component {
 
@@ -18,14 +19,16 @@ class Slide32 extends React.Component {
               <Heading fields={this.props.slide} addClass="margin-bottom-2"/>
               <Text fields={this.props.slide} addClass="ae-3 larger light margin-bottom-3"/>
               <ul class="items-32">
-                <li class="fix-4-12 toLeft ae-4 margin-bottom-3">
-                  <h4 class="small margin-bottom-1">Fashion</h4>
-                  <p class="opacity-8">Fashion is a language that creates itself in clothes to interpret reality.</p>
-                </li>
-                <li class="fix-4-12 toLeft ae-5 margin-bottom-3">
-                   <h4 class="small margin-bottom-1">Creativity</h4>
-                  <p class="opacity-8">Clear thinking at the wrong moment can stifle creativity.</p>
-                </li>
+              {this.props.slide.list.map(function(item, index){
+              let ae = index +4;
+
+              return (<li key={item._uid} class={"fix-4-12 toLeft margin-bottom-3 ae-"+ae}>
+                <Heading key={index} fields={item} addClass="margin-bottom-1" />
+                <BlockText  key={index+"A"} addClass="opacity-8" fields={item} />
+              </li>);
+            })
+          }
+
               </ul>
             </li>
             <li class="col-6-12 left ae-1 fromRight">
