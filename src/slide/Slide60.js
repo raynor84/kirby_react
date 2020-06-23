@@ -18,28 +18,21 @@ class Slide60 extends React.Component {
               <Heading fields={this.props.slide} addClass="margin-bottom-2 ae-2 fromLeft"/>
               <Text fields={this.props.slide} addClass="large margin-bottom-3 ae-3 fromLeft"/>
               <ul class="tabs controller uppercase bold ae-4 fromCenter" data-slider-id="60-60">
-                <li class="selected">Krabi Island</li>
-                <li>Community</li>
-                <li>Surfing</li>
+              {this.props.slide.list.map(function(fields, index) {
+            return <li class={index=== 0 ? "selected": ""}>{fields.text}</li>
+            })}
+            
               </ul>
             </li>
             <li class="col-6-12 left ae-5 fromCenter">
               <ul class="slider animated margin-top-tablet-4" data-slider-id="60-60">
-                <li class="selected fromCenter">
-                  <div class="popupTrigger videoThumbnail shadow rounded" data-popup-id="60-1">
-                    <Img fields={this.props.slide} addClass="wide" dataAction=""/>
-                  </div>
-                </li>
-                <li class="fromCenter">
-                  <div class="popupTrigger videoThumbnail shadow rounded" data-popup-id="60-2">
-                    <Img fields={this.props.slide} addClass="wide" dataAction=""/>
-                  </div>
-                </li>
-                <li class="fromCenter">
-                  <div class="popupTrigger videoThumbnail shadow rounded" data-popup-id="60-3">
-                    <Img fields={this.props.slide} addClass="wide" dataAction=""/>
-                  </div>
-                </li>
+              {this.props.slide.list.map(function(fields, index) {
+            return <li class={index=== 0 ? "selected fromCenter": "fromCenter"}>
+              <div class="popupTrigger videoThumbnail shadow rounded" data-popup-id={"60-"+index}>
+                <Img key={index} imageField={fields.image[0]} addClass="wide"/>
+                </div>  
+                 </li>;
+            })}
               </ul>
             </li>
           </ul>
@@ -48,6 +41,25 @@ class Slide60 extends React.Component {
       </div>
     </div>
   </Section>
+  {this.props.slide.list.map(function(fields, index) {
+   
+   return (
+ <div class="popup autoplay" data-popup-id={"60-"+index}>
+   <div class="close"><svg><use xmlnsXlink="http://www.w3.org/1999/xlink" xlinkHref="#close"></use></svg></div>
+   <div class="content">
+     <div class="container">
+       <div class="wrap">
+         <div class="fix-10-12">
+           <div class="embedVideo popupContent shadow rounded">
+             <iframe data-src={fields.youtube_url} frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen=""></iframe>
+           </div>
+         </div>
+       </div>
+     </div>
+ </div>
+ </div>
+);
+ })}
 </React.Fragment>
 
 		);

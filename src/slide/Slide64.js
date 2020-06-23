@@ -1,7 +1,9 @@
 import React from 'react';
 import Section from './Section';
 import Heading from './fields/Heading';
+import Img from './fields/Img';
 import Text from './fields/Text';
+import BlockText from './fields/BlockText';
 class Slide64 extends React.Component {
 
 	render() {
@@ -17,27 +19,19 @@ class Slide64 extends React.Component {
             <Text fields={this.props.slide} addClass="larger light margin-bottom-4 ae-2"/>
           </div>
           <ul class="flex fixedSpaces later equal left flex-64">
-            <li class="col-4-12 ae-3">
+          {this.props.slide.list.map(function(fields, index) { 
+            let ae = index +3;
+                return (
+            <li class={"col-4-12 ae-"+ae}>
               <a href="#" class="cell-64 rounded equalElement">
-                <i class="material-icons">panorama</i>
-                <h4 class="smaller margin-bottom-1">HQ Photos</h4>
-                <p class="opacity-8">Quickly swipe messages to your archive or trash.</p>
+                <Img fields={fields} addClass="margin-top-1 margin-bottom-1" />
+                <i class="material-icons">{fields.material_icon}</i>
+                <Heading fields={fields} addClass="margin-bottom-1" />
+                <BlockText addClass="opacity-8" fields={fields} />
               </a>
             </li>
-            <li class="col-4-12 ae-4">
-              <a href="#" class="cell-64 rounded equalElement">
-                <i class="material-icons">settings_applications</i>
-                <h4 class="smaller margin-bottom-1">Components</h4>
-                <p class="opacity-8">Scan entire conversations in a chat-like view.</p>
-              </a>
-            </li>
-            <li class="col-4-12 ae-6">
-              <a href="#" class="cell-64 rounded equalElement last">
-                <i class="material-icons">queue_music</i>
-                <h4 class="smaller margin-bottom-1">Best Music</h4>
-                <p class="opacity-8">Unforgettable feelings through a quality music.</p>
-              </a>
-            </li>
+                );
+          })}
           </ul>
         </div>
         

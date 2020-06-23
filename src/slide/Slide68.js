@@ -18,114 +18,25 @@ class Slide68 extends React.Component {
 
           
           <ul class="flex flex-68 tintLogos equal equalMobile">
+          {this.props.slide.list.map(function(fields, index) { 
+            
+            if (index > 5) {
+              index %= 6;
+            }
+
+            let ae = index +3;
+
+                return (
+
             <li class="col-2-12 col-tablet-1-4 col-phablet-1-3 col-phone-1-2">
-              <div class="table wide equalElement ae-3">
-                <div class="cell"><a href="#"><Img fields={this.props.slide} addClass="" dataAction=""/></a>
+              <div class={"table wide equalElement ae-"+ae}>
+                <div class="cell"><a href={typeof fields.url[0] === "object" ? fields.url[0].link: undefined}><Img fields={fields} addClass="" dataAction=""/></a>
                 </div>
               </div>
             </li>
-            <li class="col-2-12 col-tablet-1-4 col-phablet-1-3 col-phone-1-2">
-              <div class="table wide equalElement ae-4">
-                <div class="cell"><a href="#"><Img fields={this.props.slide} addClass="" dataAction=""/></a>
-                </div>
-              </div>
-            </li>
-            <li class="col-2-12 col-tablet-1-4 col-phablet-1-3 col-phone-1-2">
-              <div class="table wide equalElement ae-5">
-                <div class="cell"><a href="#"><Img fields={this.props.slide} addClass="" dataAction=""/></a>
-                </div>
-              </div>
-            </li>
-            <li class="col-2-12 col-tablet-1-4 col-phablet-1-3 col-phone-1-2">
-              <div class="table wide equalElement ae-6">
-                <div class="cell"><a href="#"><Img fields={this.props.slide} addClass="" dataAction=""/></a>
-                </div>
-              </div>
-            </li>
-            <li class="col-2-12 col-tablet-1-4 col-phablet-1-3 col-phone-1-2">
-              <div class="table wide equalElement ae-7">
-                <div class="cell"><a href="#"><Img fields={this.props.slide} addClass="" dataAction=""/></a>
-                </div>
-              </div>
-            </li>
-            <li class="col-2-12 col-tablet-1-4 col-phablet-1-3 col-phone-1-2">
-              <div class="table wide equalElement ae-8">
-                <div class="cell"><a href="#"><Img fields={this.props.slide} addClass="" dataAction=""/></a>
-                </div>
-              </div>
-            </li>
-            <li class="col-2-12 col-tablet-1-4 col-phablet-1-3 col-phone-1-2">
-              <div class="table wide equalElement ae-3">
-                <div class="cell"><a href="#"><Img fields={this.props.slide} addClass="" dataAction=""/></a>
-                </div>
-              </div>
-            </li>
-            <li class="col-2-12 col-tablet-1-4 col-phablet-1-3 col-phone-1-2">
-              <div class="table wide equalElement ae-4">
-                <div class="cell"><a href="#"><Img fields={this.props.slide} addClass="" dataAction=""/></a>
-                </div>
-              </div>
-            </li>
-            <li class="col-2-12 col-tablet-1-4 col-phablet-1-3 col-phone-1-2">
-              <div class="table wide equalElement ae-5">
-                <div class="cell"><a href="#"><Img fields={this.props.slide} addClass="" dataAction=""/></a>
-                </div>
-              </div>
-            </li>
-            <li class="col-2-12 col-tablet-1-4 col-phablet-1-3 col-phone-1-2">
-              <div class="table wide equalElement ae-6">
-                <div class="cell"><a href="#"><Img fields={this.props.slide} addClass="" dataAction=""/></a>
-                </div>
-              </div>
-            </li>
-            <li class="col-2-12 col-tablet-1-4 col-phablet-1-3 col-phone-1-2">
-              <div class="table wide equalElement ae-7">
-                <div class="cell"><a href="#"><Img fields={this.props.slide} addClass="" dataAction=""/></a>
-                </div>
-              </div>
-            </li>
-            <li class="col-2-12 col-tablet-1-4 col-phablet-1-3 col-phone-1-2">
-              <div class="table wide equalElement ae-8">
-                <div class="cell"><a href="#"><Img fields={this.props.slide} addClass="" dataAction=""/></a>
-                </div>
-              </div>
-            </li>
-            <li class="col-2-12 col-tablet-1-4 col-phablet-1-3 col-phone-1-2">
-              <div class="table wide equalElement ae-3">
-                <div class="cell"><a href="#"><Img fields={this.props.slide} addClass="" dataAction=""/></a>
-                </div>
-              </div>
-            </li>
-            <li class="col-2-12 col-tablet-1-4 col-phablet-1-3 col-phone-1-2">
-              <div class="table wide equalElement ae-4">
-                <div class="cell"><a href="#"><Img fields={this.props.slide} addClass="" dataAction=""/></a>
-                </div>
-              </div>
-            </li>
-            <li class="col-2-12 col-tablet-1-4 col-phablet-1-3 col-phone-1-2">
-              <div class="table wide equalElement ae-5">
-                <div class="cell"><a href="#"><Img fields={this.props.slide} addClass="" dataAction=""/></a>
-                </div>
-              </div>
-            </li>
-            <li class="col-2-12 col-tablet-1-4 col-phablet-1-3 col-phone-1-2">
-              <div class="table wide equalElement ae-6">
-                <div class="cell"><a href="#"><Img fields={this.props.slide} addClass="" dataAction=""/></a>
-                </div>
-              </div>
-            </li>
-            <li class="col-2-12 col-tablet-1-4 col-phablet-1-3 col-phone-1-2">
-              <div class="table wide equalElement ae-7">
-                <div class="cell"><a href="#"><Img fields={this.props.slide} addClass="" dataAction=""/></a>
-                </div>
-              </div>
-            </li>
-            <li class="col-2-12 col-tablet-1-4 col-phablet-1-3 col-phone-1-2">
-              <div class="table wide equalElement ae-8">
-                <div class="cell"><a href="#"><Img fields={this.props.slide} addClass="" dataAction=""/></a>
-                </div>
-              </div>
-            </li>
+                );
+          })}
+
           </ul>
         </div>
                 

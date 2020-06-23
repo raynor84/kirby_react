@@ -26,7 +26,7 @@ class Slide33 extends React.Component {
             <li class="col-6-12 left ae-4 fromRight">
               <ul class="slider animated" data-slider-id="31">
               {this.props.slide.list.map(function(fields, index) {
-            return <li class={index=== 0 ? "selected fromRight": "fromRight"}><Img key={index} imageField={fields.image[0]} addClass="ipad-33" dataAction="zoom"/></li>
+              return <li class={index=== 0 ? "selected fromRight": "fromRight"}><Img key={index} imageField={fields.image[0]} addClass="ipad-33" dataAction="zoom"/></li>
             })}
               </ul>
             </li>
@@ -36,6 +36,7 @@ class Slide33 extends React.Component {
       </div>
     </div>
   </Section>
+
 </React.Fragment>
 
 		);

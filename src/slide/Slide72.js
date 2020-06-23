@@ -14,7 +14,7 @@ class Slide72 extends React.Component {
       
         <div class="fix-12-12 left">
           <div class="fix-7-12 toLeft">
-            <div class="ae-1 fromRight"><Text fields={this.props.slide} addClass="large opacity-8 margin-bottom-1"/></div>
+            <div class="ae-1 fromRight"><Text fields={this.props.slide} addClass="large margin-bottom-1"/></div>
             <Heading fields={this.props.slide} addClass="margin-bottom-3 ae-2"/>
             <ButtonA fields={this.props.slide}/>
           </div>

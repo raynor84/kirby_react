@@ -7,10 +7,10 @@ class Logo extends React.Component {
 
 	}
 	render() {
-		if(this.props.imageField!=undefined) {
-			console.log(this.props.imageField.url);
+		
+		if(this.props.imageField!==undefined) {
 			return (
-				<img class={this.props.addClass} src={this.props.imageField.url} width={this.props.imageWidth} height={this.props.imageHeight} alt={this.props.imageAlt} data-action={this.props.dataAction} />
+				<img class={this.props.addClass} src={this.props.imageField.url} width={this.props.imageWidth} height={this.props.imageHeight} alt={this.props.imageAlt} data-action={this.props.dataAction} data-slider-id={this.props.datasliderid} data-slider-action={this.props.dataslideraction}/>
 			);
 		}
 		if(this.props.fields!== undefined && this.props.fields.image[0]!==undefined) {

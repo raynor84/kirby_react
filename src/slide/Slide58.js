@@ -18,7 +18,7 @@ class Slide58 extends React.Component {
           <Text fields={this.props.slide} addClass="larger light ae-2"/>
           <div class="ae-3">
               {this.props.slide.rtetext.map(function(content, index) {
-                return <RteText content={content} index={index} addClass="smallest margin-top-4 margin-bottom-2"/>
+                return <RteText content={content} index={index} addClass=""/>
               })}
           </div>
           

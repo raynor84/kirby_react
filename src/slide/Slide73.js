@@ -2,6 +2,7 @@ import React from 'react';
 import Section from './Section';
 import Heading from './fields/Heading';
 import Text from './fields/Text';
+import BlockText from './fields/BlockText';
 import Img from './fields/Img';
 class Slide73 extends React.Component {
 
@@ -26,24 +27,16 @@ class Slide73 extends React.Component {
 
         <div class="fix-12-12">
           <ul class="flex fixedSpaces later equal flex-73 align-left margin-top-6 margin-top-tablet-0">
-            <li class="col-4-12 ae-3">
-              <a href="#" class="cell-73 padding-3 rounded equalElement">
-                <h4 class="smaller margin-bottom-1">HQ Photos</h4>
-                <p class="small cropBottom opacity-8">Quickly swipe messages to your archive or trash. <span class="nobr text-blue">Learn more &#x2192;</span></p>
+          {this.props.slide.list.map(function(fields, index) { 
+            let ae = index + 3;
+            return (
+            <li class={"col-4-12 ae-"+ae}>
+              <a href={typeof fields.url[0] === "object" ? fields.url[0].link : undefined}  class="cell-73 padding-3 rounded equalElement">
+                <Heading addClass="margin-bottom-1" fields={fields} />
+                <BlockText addClass="small cropBottom opacity-8" fields={fields} />
               </a>
             </li>
-            <li class="col-4-12 ae-4">
-              <a href="#" class="cell-73 padding-3 rounded equalElement">
-                <h4 class="smaller margin-bottom-1">Useful Components</h4>
-                <p class="small cropBottom opacity-8">Scan entire conversations in a chat-like view. <span class="nobr text-blue">Learn more &#x2192;</span></p>
-              </a>
-            </li>
-            <li class="col-4-12 ae-6">
-              <a href="#" class="cell-73 padding-3 rounded equalElement last">
-                <h4 class="smaller margin-bottom-1">Best Music</h4>
-                <p class="small cropBottom opacity-8">Unforgettable feelings through a quality music. <span class="nobr text-blue">Learn more &#x2192;</span></p>
-              </a>
-            </li>
+            ); })}
           </ul>
         </div>
 

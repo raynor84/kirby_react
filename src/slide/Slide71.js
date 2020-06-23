@@ -2,6 +2,7 @@ import React from 'react';
 import Section from './Section';
 import Heading from './fields/Heading';
 import Text from './fields/Text';
+import BlockText from './fields/BlockText';
 import PopupButton from './fields/PopupButton';
 class Slide71 extends React.Component {
 
@@ -15,37 +16,42 @@ class Slide71 extends React.Component {
         <div class="fix-8-12">
           <Heading fields={this.props.slide} addClass="margin-bottom-2 ae-1 margin-bottom-2"/>
           <div class="ae-2"><Text fields={this.props.slide} addClass="larger light opacity-8 margin-bottom-2"/></div>
-          <PopupButton fields={this.props.slide} popupid="71-71"/>
+          <PopupButton fields={this.props.slide} popupid="71"/>
         </div>
         <div class="fix-12-12 margin-top-4">
           <ul class="flex fixedSpaces later equal left flex-71">
-            <li class="col-4-12 ae-3">
-              <a href="#" class="cell-71 rounded equalElement">
-                <i class="material-icons">panorama</i>
-                <h4 class="smaller margin-bottom-1">HQ Photos</h4>
-                <p class="small opacity-8">Quickly swipe messages to your archive or trash. <span class="nobr text-blue">Learn more &#x2192;</span></p>
+          {this.props.slide.list.map(function(fields, index) { 
+            let ae = index + 3;
+            return (
+            <li class={"col-4-12 ae-"+ae}>
+              <a href={typeof fields.url[0] === "object" ? fields.url[0].link : undefined} class="cell-71 rounded equalElement">
+                  <i class="material-icons">{fields.material_icon}</i>
+                  <Heading addClass="margin-bottom-1" fields={fields} />
+                  <BlockText addClass="small opacity-8" fields={fields} />
               </a>
             </li>
-            <li class="col-4-12 ae-4">
-              <a href="#" class="cell-71 rounded equalElement">
-                <i class="material-icons">settings_applications</i>
-                <h4 class="smaller margin-bottom-1">Useful Components</h4>
-                <p class="small opacity-8">Scan entire conversations in a chat-like view. <span class="nobr text-blue">Learn more &#x2192;</span></p>
-              </a>
-            </li>
-            <li class="col-4-12 ae-6">
-              <a href="#" class="cell-71 rounded equalElement last">
-                <i class="material-icons">face</i>
-                <h4 class="smaller margin-bottom-1">Best Music</h4>
-                <p class="small opacity-8">Unforgettable feelings through a quality music. <span class="nobr text-blue">Learn more &#x2192;</span></p>
-              </a>
-            </li>
+            );
+          })}
           </ul>
         </div>
 
       </div>
     </div>
   </Section>
+  <div class="popup autoplay" data-popup-id="71">
+  <div class="close"><svg><use xmlnsXlink="http://www.w3.org/1999/xlink" xlinkHref="#close"></use></svg></div>
+  <div class="content">
+    <div class="container">
+      <div class="wrap">
+        <div class="fix-10-12">
+          <div class="embedVideo popupContent shadow rounded">
+            <iframe data-src={this.props.slide.youtube_url} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 </React.Fragment>
 
 		);

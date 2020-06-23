@@ -2,8 +2,7 @@ import React from 'react';
 import Section from './Section';
 import Heading from './fields/Heading';
 import Text from './fields/Text';
-import ButtonA from './fields/ButtonA';
-import ButtonB from './fields/ButtonB';
+import BlockText from './fields/BlockText';
 import Img from './fields/Img';
 class Slide66 extends React.Component {
 
@@ -20,23 +19,18 @@ class Slide66 extends React.Component {
         </div>
         <div class="fix-10-12">
           <ul class="flex later equal left">
+          {this.props.slide.list.map(function(fields, index) { 
+            let ae = index +3;
+                return (
             <li class="col-4-12 margin-top-5">
-              <ButtonA fields={this.props.slide}/>
-              <h4 class="smallest margin-top-1 ae-4">The Skinny on LCD Monitors</h4>
-              <div class="margin-top-1 ae-5"><p class="small opacity-8">The monkey-rope is found in all whalers; but it was on.</p></div>
+              <a href={typeof fields.url[0]==="object" ? fields.url[0].link: undefined} class="button empty rounded shadow margin-bottom-1 ae-3 done" >
+                  <Img fields={fields} addClass="wide" />
+              </a>  
+              <Heading fields={fields} addClass={"margin-top-1 ae-"+(ae+1)} />
+              <div class="margin-top-1 ae-5"><BlockText addClass="small opacity-8" fields={fields} /></div>
             </li>
-            <li class="col-4-12 margin-top-5">
-              <div class="rounded videoThumbnail shadow video-66 popupTrigger margin-bottom-2 ae-4" data-popup-id="66-66">
-                <Img fields={this.props.slide} addClass="wide" dataAction=""/>
-              </div>
-              <h4 class="smallest margin-top-1 ae-5">What is HDMI</h4>
-              <div class="margin-top-1 ae-6"><p class="small opacity-8">In the tumultuous business of cutting-in and attending.</p></div>
-            </li>
-            <li class="col-4-12 margin-top-5">
-              <ButtonB fields={this.props.slide}/>
-              <h4 class="smallest margin-top-1 ae-6">Download Free Song for iPod</h4>
-              <div class="margin-top-1 ae-7"><p class="small opacity-8">So strongly and metaphysically did I conceive of my situation.</p></div>
-            </li>
+                );
+          })}
           </ul>
         </div>
 
