@@ -23,7 +23,7 @@ class Slide74 extends React.Component {
           {this.props.slide.list.map(function(fields, index) { 
             let ae = index + 3;
             return (
-            <li class="col-3-12 col-tablet-1-2 col-phablet-1-1 ae-3 fromCenter">
+            <li class={"col-3-12 col-tablet-1-2 col-phablet-1-1 fromCenter ae-"+ae}>
               <a href={typeof fields.url[0] === "object" ? fields.url[0].link : undefined} class="box-74" nofollow={fields.follow} target={fields.target}>
                 <div class="thumbnail-74">
                   <Img fields={fields} addClass="wide" dataAction=""/>

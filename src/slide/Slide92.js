@@ -14,7 +14,7 @@ class Slide92 extends React.Component {
       
         <div class="fix-9-12">
           <Heading fields={this.props.slide} addClass="margin-bottom-4 ae-1"/>
-          <ButtonA fields={this.props.slide}/>
+          <ButtonA fields={this.props.slide} addClass="ae-2"/>
           <div class="ae-3 margin-top-2"><Text fields={this.props.slide} addClass=""/></div>
         </div>
                 

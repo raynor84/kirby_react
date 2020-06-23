@@ -23,7 +23,7 @@ class Slide66 extends React.Component {
             let ae = index +3;
                 return (
             <li class="col-4-12 margin-top-5">
-              <a href={typeof fields.url[0]==="object" ? fields.url[0].link: undefined} class="button empty rounded shadow margin-bottom-1 ae-3 done" >
+              <a href={typeof fields.url[0]==="object" ? fields.url[0].link: undefined} class="button empty rounded shadow margin-bottom-1 ae-3 done" nofollow={fields.follow} target={fields.target}>
                   <Img fields={fields} addClass="wide" />
               </a>  
               <Heading fields={fields} addClass={"margin-top-1 ae-"+(ae+1)} />

@@ -1,6 +1,7 @@
 import React from 'react';
 import Section from './Section';
 import Text from './fields/Text';
+import Text2 from './fields/Text2';
 import Logo from './fields/Logo';
 import ButtonA from './fields/ButtonA';
 import ButtonB from './fields/ButtonB';
@@ -22,7 +23,7 @@ class Slide78 extends React.Component {
           </div>
           <ButtonA fields={this.props.slide}/><ButtonB fields={this.props.slide}/>
           <div class="ae-10 fromRight margin-top-1">
-            <p class="small"><span class="opacity-8">Also, we have a version for</span> <a class="bold" href="#">Mac</a></p>
+            <Text2 fields={this.props.slide} addClass="small opacity-8" />
           </div>
         </div>
           

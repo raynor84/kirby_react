@@ -30,7 +30,7 @@ class Slide68 extends React.Component {
 
             <li class="col-2-12 col-tablet-1-4 col-phablet-1-3 col-phone-1-2">
               <div class={"table wide equalElement ae-"+ae}>
-                <div class="cell"><a href={typeof fields.url[0] === "object" ? fields.url[0].link: undefined}><Img fields={fields} addClass="" dataAction=""/></a>
+                <div class="cell"><a href={typeof fields.url[0] === "object" ? fields.url[0].link: undefined} nofollow={fields.follow} target={fields.target}><Img fields={fields} addClass="" dataAction=""/></a>
                 </div>
               </div>
             </li>

@@ -21,7 +21,7 @@ class RteText extends React.Component {
           return <p class={"ae-"+ae}>{this.props.content.content}</p>;
         }
         if(this.props.content.type==="image") {
-            return <img src={this.props.content.attrs.src} />;
+            return <img src={this.props.content.attrs.src} alt="" />;
         }
         if(this.props.content.type==="hr") {
             return <hr />;

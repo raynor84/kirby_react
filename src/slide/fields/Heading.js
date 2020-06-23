@@ -12,7 +12,7 @@ class Heading extends React.Component {
                         {parse(this.props.fields.title)}
                 </this.props.fields.ordnung>
             );
-        return null;
+        
 
     }
 }

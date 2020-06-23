@@ -1,8 +1,8 @@
 import React from 'react';
 import Section from './Section';
 import Heading from './fields/Heading';
-import Text from './fields/Text';
-import Logo from './fields/Logo';
+import BlockText from './fields/BlockText';
+
 class Slide86 extends React.Component {
 
 	render() {
@@ -15,11 +15,11 @@ class Slide86 extends React.Component {
         <div class="fix-12-12 left">
           <div class="fix-6-12 toLeft">
             <Heading fields={this.props.slide} addClass="margin-bottom-5 ae-1 fromLeft"/>
-            <div class="popupTrigger ae-3 fromRight relative margin-top-4" data-popup-id="86-86">
+            <div class="popupTrigger ae-3 fromRight relative margin-top-4" data-popup-id="86">
                 <span class="button play white button-86 absolute">
-                  <Logo fields={this.props.slide}/>
+                <svg><use xmlnsXlink="http://www.w3.org/1999/xlink" xlinkHref="#play"></use></svg>
                 </span>
-                <div class="text-86"><Text fields={this.props.slide} addClass="smaller bold uppercase cropBottom"/><p class="cropBottom small opacity-8">See Slides in action (2:00)</p></div>
+                <div class="text-86"><BlockText field={this.props.slide.video_text} addClass="smaller bold uppercase cropBottom"/><BlockText field={this.props.slide.video_text2} addClass="cropBottom small opacity-8" /></div>
               </div>
           </div>
         </div>
@@ -27,6 +27,21 @@ class Slide86 extends React.Component {
       </div>
     </div>
   </Section>
+
+  <div class="popup autoplay" data-popup-id="86">
+  <div class="close"><svg><use xmlnsXlink="http://www.w3.org/1999/xlink" xlinkHref="#close"></use></svg></div>
+  <div class="content">
+    <div class="container">
+      <div class="wrap">
+        <div class="fix-10-12">
+          <div class="embedVideo popupContent shadow rounded">
+            <iframe data-src={this.props.slide.youtube_url} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 </React.Fragment>
 
 		);

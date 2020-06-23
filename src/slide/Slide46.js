@@ -26,7 +26,7 @@ class Slide46 extends React.Component {
           {this.props.slide.list.map(function(fields, index) {
             return (
             <li key={index} class="col-4-12 box-46">
-            <a href={fields.url} class="button empty shadow rounded crop ae-3 done">
+            <a href={typeof fields.url[0]==="object" ? fields.url[0].link: undefined} class="button empty shadow rounded crop ae-3 done" nofollow={fields.follow} target={fields.target}>
                 <Img 
                   addClass="rounded" 
                   fields={fields}

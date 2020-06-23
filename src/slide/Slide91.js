@@ -2,6 +2,7 @@ import React from 'react';
 import Section from './Section';
 import Heading from './fields/Heading';
 import Text from './fields/Text';
+import BlockText from './fields/BlockText';
 import ButtonA from './fields/ButtonA';
 class Slide91 extends React.Component {
 
@@ -16,25 +17,17 @@ class Slide91 extends React.Component {
           <div class="fix-8-12">
             <Text fields={this.props.slide} addClass="large margin-bottom-2 ae-1"/>
             <Heading fields={this.props.slide} addClass="margin-bottom-4 ae-2 fromAbove"/>
-            <ButtonA fields={this.props.slide}/>
+            <ButtonA fields={this.props.slide} addClass="ae-3" />
           </div>
           <ul class="flex fixedSpaces left margin-top-10">
-            <li class="col-3-12 col-tablet-1-2 col-phablet-1-1 ae-4 fromLeft">
-             <h4 class="smaller margin-bottom-1">Inspiration</h4>
-             <p class="small opacity-8">We live in a society where everybody feels shameless and guilty.</p>
+          {this.props.slide.list.map(function(fields, index) { 
+            let ae = index + 4;
+            return (
+            <li class={"col-3-12 col-tablet-1-2 col-phablet-1-1 fromLeft ae-"+ae}>
+             <Heading fields={fields} addClass="smaller margin-bottom-1" />
+             <BlockText fields={fields} addClass="small opacity-8" />
             </li>
-            <li class="col-3-12 col-tablet-1-2 col-phablet-1-1 ae-5 fromLeft">
-             <h4 class="smaller margin-bottom-1">Creativity</h4>
-             <p class="small opacity-8">Hey there! You don&#x2019;t have to be &#x201C;a creative&#x201D; to be creative.</p>
-            </li>
-            <li class="col-3-12 col-tablet-1-2 col-phablet-1-1 ae-6 fromLeft">
-             <h4 class="smaller margin-bottom-1">Fashion</h4>
-             <p class="small opacity-8">There is no such thing as simple. Simple is actually hard to achieve.</p>
-            </li>
-            <li class="col-3-12 col-tablet-1-2 col-phablet-1-1 ae-7 fromLeft">
-             <h4 class="smaller margin-bottom-1">Photography</h4>
-             <p class="small opacity-8">Design is a language that makes what was once impossible possible.</p>
-            </li>
+            ); })}
           </ul>
         </div>
                 

@@ -31,7 +31,7 @@ class Slide73 extends React.Component {
             let ae = index + 3;
             return (
             <li class={"col-4-12 ae-"+ae}>
-              <a href={typeof fields.url[0] === "object" ? fields.url[0].link : undefined}  class="cell-73 padding-3 rounded equalElement">
+              <a href={typeof fields.url[0] === "object" ? fields.url[0].link : undefined}  class="cell-73 padding-3 rounded equalElement" nofollow={fields.follow} target={fields.target}>
                 <Heading addClass="margin-bottom-1" fields={fields} />
                 <BlockText addClass="small cropBottom opacity-8" fields={fields} />
               </a>

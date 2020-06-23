@@ -18,7 +18,7 @@ class Slide59 extends React.Component {
           <div class="pad padding-4 padding-phablet-3 padding-phone-2 shadow left ae-3 pad-59 margin-top-4">
             <div class="ae-3">
                 {this.props.slide.rtetext.map(function(content, index) {
-                  if(index==0) {
+                  if(index===0) {
                     return <RteText content={content} index={index} addClass="margin-top-0 margin-bottom-2 "/>
                   }
                   return <RteText content={content} index={index} addClass="margin-top-3 margin-bottom-2"/>
