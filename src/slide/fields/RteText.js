@@ -16,14 +16,14 @@ class RteText extends React.Component {
         
     renderList(elements, index, type) {
 
-        if(elements[index].type === "ol") {
+        if(elements[index].type === type) {
             let li = [];
 
             //Foreach ol-elements in elements render List
             for(let i=index; i<elements.length; i++) {
                 
-                if(elements[i].type==="ol") {
-                    li.push(<li>{elements[i].content}</li>);
+                if(elements[i].type===type) {
+                    li.push(<li>{parse(elements[i].content)}</li>);
                 } else {
                     break;
                 }
@@ -48,14 +48,15 @@ class RteText extends React.Component {
                 let li = this.renderList(this.props.elements, this.props.index, "ol");
                 return <ol>{li}</ol>
             }
-            //return null;
+            return null;
         }
         if(this.props.content.type==="ul") {
             console.log(this.props.elements[this.props.index-1].type);
             if(this.props.elements[this.props.index-1].type!=="ul" ) {
                 let li = this.renderList(this.props.elements, this.props.index, "ul");
-                return <ol>{li}</ol>
+                return <ul>{li}</ul>
             }
+            return null;
         }
         if(this.props.content.type==="video") {
             let iframeMarkup;

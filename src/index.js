@@ -16,13 +16,16 @@ class App extends React.Component {
 
 
   componentDidMount() {
-    //const proxyurl = "https://cors-anywhere.herokuapp.com/";
 
     var url_string = window.location.href;
+    //
+    console.log(url_string);
     var myurl = new URL(url_string);
-    console.log(myurl);
+    
     let url ="";
-    if(myurl.pathname!=="/") {
+    url_string = myurl.pathname.slice(myurl.pathname.indexOf("pages"));
+    console.log(url_string);
+    if(url_string!=="/") {
       url = "http://localhost/kirby/api"+  myurl.pathname;
 
     } else {
