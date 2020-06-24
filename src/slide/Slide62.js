@@ -20,8 +20,9 @@ class Slide62 extends React.Component {
               <Text fields={this.props.slide} addClass="large margin-bottom-4 ae-3"/>
               <ul class="flex fixedSpaces flex-62 later">
               {this.props.slide.list.map(function(fields, index) { 
+                let ae = index +4;
                 return (
-                <li class="col-6-12 ae-4">
+                <li class={"col-6-12 ae-"+ae}>
                   <Img fields={fields} addClass="margin-top-1 margin-bottom-1" />
                   <i class="material-icons">{fields.material_icon}</i>
                   <Heading addClass="margin-bottom-1" fields={fields}/>

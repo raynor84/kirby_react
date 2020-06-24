@@ -2,7 +2,6 @@ import React from 'react';
 import Section from './Section';
 import Heading from './fields/Heading';
 import Text from './fields/Text';
-import Img from './fields/Img';
 import VideoThumbnail from './fields/VideoThumbnail';
 class Slide18 extends React.Component {
 
@@ -15,7 +14,7 @@ class Slide18 extends React.Component {
 
         <div class="fix-12-12 left">
           <div class="fix-5-12 toLeft">
-            <Heading fields={this.props.slide} addClass="margin-bottom-2"/>
+            <Heading fields={this.props.slide} addClass="margin-bottom-2 ae-1"/>
             <Text fields={this.props.slide} addClass="ae-2 fromRight large"/>
             <VideoThumbnail fields={this.props.slide} popupid="18-18"/>
           </div>

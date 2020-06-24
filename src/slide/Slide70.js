@@ -17,9 +17,10 @@ class Slide70 extends React.Component {
         <div class="fix-12-12">  
           <ul class="flex equal later fromCenter">
           {this.props.slide.list.map(function(fields, index) { 
+            let ae = index +1;
             return (
             <li class="col-4-12 margin-bottom-tablet-2">
-              <div class="pad shadowHover padding-0 ae-1">
+              <div class={"pad shadowHover padding-0 ae-"+ae}>
                 <div class="thumbnail-70">
                   <Img fields={fields} addClass="wide" dataAction=""/>
                 </div>

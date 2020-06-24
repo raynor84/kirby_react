@@ -1,5 +1,5 @@
 import React from 'react';
-
+var parse = require('html-react-parser');
 
 class RteText extends React.Component {
 	componentDidMount() {
@@ -14,7 +14,23 @@ class RteText extends React.Component {
           : null;
     }
         
+    renderList(elements, index, type) {
 
+        if(elements[index].type === "ol") {
+            let li = [];
+
+            //Foreach ol-elements in elements render List
+            for(let i=index; i<elements.length; i++) {
+                
+                if(elements[i].type==="ol") {
+                    li.push(<li>{elements[i].content}</li>);
+                } else {
+                    break;
+                }
+            }
+            return li;
+        }
+    }
 	render() {
         let ae = this.props.index +3;
         if(this.props.content.type==="paragraph") {
@@ -27,20 +43,35 @@ class RteText extends React.Component {
             return <hr />;
         }
         if(this.props.content.type==="ol") {
-            return (<ol>
-                    <li>
-                        {this.props.content.content}
-                    </li>
-                    </ol>);
+            console.log(this.props.elements[this.props.index-1].type);
+            if(this.props.elements[this.props.index-1].type!=="ol" ) {
+                let li = this.renderList(this.props.elements, this.props.index, "ol");
+                return <ol>{li}</ol>
+            }
+            //return null;
+        }
+        if(this.props.content.type==="ul") {
+            console.log(this.props.elements[this.props.index-1].type);
+            if(this.props.elements[this.props.index-1].type!=="ul" ) {
+                let li = this.renderList(this.props.elements, this.props.index, "ul");
+                return <ol>{li}</ol>
+            }
         }
         if(this.props.content.type==="video") {
-            const videoId = this.getId(this.props.content.attrs.src);
-        const iframeMarkup = <div class="embedVideo"><iframe width="560" height="315" src={"//www.youtube.com/embed/" 
-        + videoId} frameborder="0" allowfullscreen></iframe></div>;
-    
+            let iframeMarkup;
+            if(this.props.content.attrs.src.includes("youtu.be")) {
+
+                const videoId = this.getId(this.props.content.attrs.src);
+                iframeMarkup = <div class="embedVideo"><iframe title={"Video"} width="560" height="315" src={"//www.youtube.com/embed/" 
+                + videoId} frameborder="0" allowfullscreen></iframe></div>;
+            
+                   
+            } else {
+                iframeMarkup = <div class="embedVideo"><iframe title={"Video"} width="560" height="315" src={this.props.content.attrs.src} frameborder="0" allowfullscreen></iframe></div>;
+            }
             return iframeMarkup;
         }
-        
+      
         if(this.props.addClass) {
             return <this.props.content.type class={"smallest ae-"+ae +" "+this.props.addClass}>{this.props.content.content}</this.props.content.type>;
         }

@@ -14,7 +14,7 @@ class Slide79 extends React.Component {
       <div class="wrap">
       
         <div class="fix-10-12">
-          <Heading fields={this.props.slide} addClass=""/>
+          <Heading fields={this.props.slide} addClass="ae-1"/>
           
           <div class="ae-3 author-79 left margin-top-4">
             <Img fields={this.props.slide} addClass="avatar-79 round" dataAction=""/>
@@ -27,9 +27,9 @@ class Slide79 extends React.Component {
           <ul class="flex flex-79 margin-top-6 later left">
 
           {this.props.slide.list.map(function(fields, index) { 
-            let ae = index + 3;
+            let ae = index + 4;
             return (
-            <li class="col-6-12 ae-4">
+            <li class={"col-6-12 ae-"+ae}>
               <i class="material-icons">{fields.material_icon}</i>
               <Heading fields={fields} addClass="margin-bottom-1" />
               <BlockText addClass="small opacity-8" fields={fields}/>

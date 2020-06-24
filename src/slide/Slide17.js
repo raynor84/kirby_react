@@ -3,7 +3,7 @@ import Section from './Section';
 import Heading from './fields/Heading';
 import Text from './fields/Text';
 import ButtonA from './fields/ButtonA';
-import Img from './fields/Img';
+
 import VideoThumbnail from './fields/VideoThumbnail';
 class Slide17 extends React.Component {
 

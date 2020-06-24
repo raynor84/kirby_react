@@ -33,14 +33,22 @@ class AnimationLoader {
 
     initializeScript() {
             //Load Scripts
+
+
             var script = document.createElement("script");
             script.src = "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js";
             this.scripts.push(script);
+
+            let script3= document.createElement("script");
+            script3.src = "/js/swiper.min.js";
+            this.scripts.push(script3);
 
             let script2 = JSON.parse(JSON.stringify(script));
             script2 = document.createElement("script");
             script2.src = "/js/slides.min.js?509341";
             this.scripts.push(script2);
+
+            
     }
 
 

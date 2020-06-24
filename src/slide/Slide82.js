@@ -2,7 +2,6 @@ import React from 'react';
 import Section from './Section';
 import Heading from './fields/Heading';
 import Text from './fields/Text';
-import Logo from './fields/Logo';
 import ButtonA from './fields/ButtonA';
 import Img from './fields/Img';
 class Slide82 extends React.Component {

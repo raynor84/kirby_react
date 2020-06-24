@@ -12,7 +12,7 @@ class Slide93 extends React.Component {
       <div class="wrap">
       
         <div class="frame-93 rounded ae-1">
-          <div class="ae-2"><Text fields={this.props.slide} addClass="larger light cropBottom margin-top-1 inline-block"/><ButtonA fields={this.props.slide} addClass="button rounded middle margin-top-1 margin-left-2 margin-right-2 ae-3 wideForTablet margin-tablet-0 margin-top-tablet-2"/></div>
+          <div class="ae-2"><Text fields={this.props.slide} addClass="larger light cropBottom margin-top-2 inline-block"/><ButtonA fields={this.props.slide} addClass="button rounded middle margin-top-1 margin-left-2 margin-right-2 ae-3 wideForTablet margin-tablet-0 margin-top-tablet-2"/></div>
         </div>
                 
       </div>

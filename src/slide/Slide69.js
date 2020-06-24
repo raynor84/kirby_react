@@ -19,11 +19,12 @@ class Slide69 extends React.Component {
         <div class="fix-12-12">  
           <ul class="flex fixedSpaces later flex-69 equal equalMobile popupTrigger controller" data-popup-id="69" data-slider-id="69">
           {this.props.slide.list.map(function(fields, index) { 
+            let ae = index +3;
             console.log(fields.image[0].url);
             let image = typeof fields.image[0] === "object" ? fields.image[0].url : undefined;
             return (
             <li class="col-4-12 margin-bottom-phablet-2">
-              <div class="box-69 cursorZoomIn rounded ae-3 equalElement selected" style={{"backgroundImage":"url("+image+")"}}>
+              <div class={"box-69 cursorZoomIn rounded equalElement selected ae-"+ae} style={{"backgroundImage":"url("+image+")"}}>
                 <div class="table cell-69 equalElement">
                   <div class="cell">
                     <Heading fields={fields} addClass="margin-bottom-1" />

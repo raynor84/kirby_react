@@ -7,7 +7,8 @@ import Img from './fields/Img';
 class Slide73 extends React.Component {
 
 	render() {
-		return (
+
+    return (
 <React.Fragment>
   <Section slide={this.props.slide}>
     <div class="container">
@@ -44,8 +45,8 @@ class Slide73 extends React.Component {
     </div>
   </Section>
 </React.Fragment>
+    );
 
-		);
 	}
 }
 export default Slide73;

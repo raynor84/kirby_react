@@ -2,7 +2,6 @@ import React from 'react';
 import Section from './Section';
 import Heading from './fields/Heading';
 import Text from './fields/Text';
-import Logo from './fields/Logo';
 class Slide56 extends React.Component {
 
 	render() {
@@ -22,7 +21,7 @@ class Slide56 extends React.Component {
               return (
                 <li class={"col-4-12 ae-"+ae}>
                   <div class="fix-3-12 equalElement">
-                    <Heading fields={fields} addClass="bold uppercase opacity-4 margin-top-3 margin-bottom-2" />
+                    <Heading fields={fields} addClass="bold uppercase opacity-4 margin-top-3 margin-bottom-2 ae-1" />
                     <p><a class="opacity-8" href={typeof fields.url[0] ==="object" && fields.url[0] !== undefined ? fields.url[0].link:""}>{fields.text}</a></p>
                   </div>
                 </li>
@@ -32,7 +31,7 @@ class Slide56 extends React.Component {
                   <li class={"col-4-12 ae-"+ae}>
                   <div class="fix-3-12 equalElement">
 
-                    <Heading fields={fields} addClass="bold uppercase opacity-4 margin-top-3 margin-bottom-2" />
+                    <Heading fields={fields} addClass="bold uppercase opacity-4 margin-top-3 margin-bottom-2 ae-1" />
                     <ul class="social-circles">
                       {fields.facebook_url && <li><a class="social-facebook" href={fields.facebook_url}><svg><use xmlnsXlink="http://www.w3.org/1999/xlink" xlinkHref="#facebook2"></use></svg></a></li>}
                       {fields.whatsup_url && <li><a class="social-whatsapp" href={fields.whatsup_url}><svg><use xmlnsXlink="http://www.w3.org/1999/xlink" xlinkHref="#whatsapp"/></svg></a></li>}

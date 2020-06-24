@@ -1,7 +1,6 @@
 import React from 'react';
 import Section from './Section';
 import Heading from './fields/Heading';
-import Text from './fields/Text';
 import Subtitle from './fields/Subtitle';
 import BlockText from './fields/BlockText';
 class Slide24 extends React.Component {

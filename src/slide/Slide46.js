@@ -3,10 +3,7 @@ import Section from './Section';
 import Heading from './fields/Heading';
 import Text from './fields/Text';
 import TextBlock from './fields/BlockText';
-import ButtonA from './fields/ButtonA';
-import ButtonB from './fields/ButtonB';
 import Img from './fields/Img';
-import VideoThumbnail from './fields/VideoThumbnail';
 class Slide46 extends React.Component {
 
 	render() {

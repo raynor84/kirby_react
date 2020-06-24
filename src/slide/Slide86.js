@@ -35,7 +35,7 @@ class Slide86 extends React.Component {
       <div class="wrap">
         <div class="fix-10-12">
           <div class="embedVideo popupContent shadow rounded">
-            <iframe data-src={this.props.slide.youtube_url} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+            <iframe title={this.props.slide._key} data-src={this.props.slide.youtube_url} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
           </div>
         </div>
       </div>

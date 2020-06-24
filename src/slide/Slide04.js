@@ -1,7 +1,6 @@
 import React from 'react';
 import Section from './Section';
 import Logo from './fields/Logo';
-import Img from './fields/Img';
 import VideoThumbnail from './fields/VideoThumbnail';
 class Slide04 extends React.Component {
 

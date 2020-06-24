@@ -12,7 +12,7 @@ class Slide95 extends React.Component {
   <Section slide={this.props.slide}>
     <div class="container">
       <div class="wrap">
-        <Heading fields={this.props.slide} addClass="margin-bottom-2"/>
+        <Heading fields={this.props.slide} addClass="margin-bottom-2 ae-1"/>
         <Text fields={this.props.slide} addClass="larger light ae-2 margin-bottom-4"/>
 
         <div class="fix-5-12">

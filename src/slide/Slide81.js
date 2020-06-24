@@ -2,7 +2,6 @@ import React from 'react';
 import Section from './Section';
 import Heading from './fields/Heading';
 import Text from './fields/Text';
-import Img from './fields/Img';
 import VideoThumbnail from './fields/VideoThumbnail';
 class Slide81 extends React.Component {
 
@@ -34,7 +33,7 @@ class Slide81 extends React.Component {
       <div class="wrap">
         <div class="fix-10-12">
           <div class="embedVideo popupContent shadow rounded">
-            <iframe data-src={this.props.slide.youtube_url} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+            <iframe title="Video" data-src={this.props.slide.youtube_url} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
           </div>
         </div>
       </div>

@@ -16,7 +16,7 @@ class Slide31 extends React.Component {
           <ul class="flex reverse">
             <li class="col-6-12">
               <div class="col-11-12 toLeft"> 
-                <Heading fields={this.props.slide} addClass="margin-bottom-2"/>
+                <Heading fields={this.props.slide} addClass="margin-bottom-2 ae-1"/>
                 <Text fields={this.props.slide} addClass="ae-2 large"/>
 
                 <div class="relative ae-3">

@@ -51,7 +51,7 @@ class Slide60 extends React.Component {
        <div class="wrap">
          <div class="fix-10-12">
            <div class="embedVideo popupContent shadow rounded">
-             <iframe data-src={fields.youtube_url} frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen=""></iframe>
+             <iframe title="Video" data-src={fields.youtube_url} frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen=""></iframe>
            </div>
          </div>
        </div>

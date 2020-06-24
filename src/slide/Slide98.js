@@ -1,7 +1,10 @@
 import React from 'react';
 import Section from './Section';
 import Text from './fields/Text';
+import Heading from './fields/Heading';
 import Img from './fields/Img';
+import "../css/swiper.min.css";
+
 class Slide98 extends React.Component {
 
 	render() {
@@ -14,54 +17,19 @@ class Slide98 extends React.Component {
         <div class="fix-12-12 ae-1">
           <div class="swiper-98">
             <div class="swiper-wrapper">
-              <a href="#asdf" class="box-98 swiper-slide noText">
+            {this.props.slide.list.map(function(fields, index) { 
+            
+            return (
+              <a key={index} href={typeof fields.url[0] === "object" ? fields.url[0].link : undefined} nofollow={fields.follow} target={fields.target} class="box-98 swiper-slide noText">
                 <div class="relative text-white disableSelect">
-                  <Img fields={this.props.slide} addClass="wide rounded" dataAction=""/>
-                  <Text fields={this.props.slide} addClass="smallest uppercase bold title-slide-98 opacity-8"/>
-                  <h4 class="small subtitle-slide-98">Pictures in Which the Magic Lives</h4>
+                  <Img fields={fields} addClass="wide rounded" dataAction=""/>
+                  <Text fields={fields} addClass="smallest uppercase bold title-slide-98 opacity-8"/>
+                  <Heading addClass="subtitle-slide-98" fields={fields}/>
                   <div class="blackout-98"/>
                 </div>
               </a>
-              <a href="#asdf" class="box-98 swiper-slide noText">
-                <div class="relative text-white disableSelect">
-                  <Img fields={this.props.slide} addClass="wide rounded" dataAction=""/>
-                  <p class="smallest uppercase bold title-slide-98 opacity-8">Gallery</p>
-                  <h4 class="small subtitle-slide-98">20 Most Strange Paintings in the World</h4>
-                  <div class="blackout-98"/>
-                </div>
-              </a>
-              <a href="#asdf" class="box-98 swiper-slide noText">
-                <div class="relative text-white disableSelect">
-                  <Img fields={this.props.slide} addClass="wide rounded" dataAction=""/>
-                  <p class="smallest uppercase bold title-slide-98 opacity-8">Exhibition</p>
-                  <h4 class="small subtitle-slide-98">South Korean Artist: The Origin of Creativity</h4>
-                  <div class="blackout-98"/>
-                </div>
-              </a>
-              <a href="#asdf" class="box-98 swiper-slide noText">
-                <div class="relative text-white disableSelect">
-                  <Img fields={this.props.slide} addClass="wide rounded" dataAction=""/>
-                  <p class="smallest uppercase bold title-slide-98 opacity-8">Display</p>
-                  <h4 class="small subtitle-slide-98">Pictures in Which the Magic Lives</h4>
-                  <div class="blackout-98"/>
-                </div>
-              </a>
-              <a href="#asdf" class="box-98 swiper-slide noText">
-                <div class="relative text-white disableSelect">
-                  <Img fields={this.props.slide} addClass="wide rounded" dataAction=""/>
-                  <p class="smallest uppercase bold title-slide-98 opacity-8">Gallery</p>
-                  <h4 class="small subtitle-slide-98">20 Most Strange Paintings in the World</h4>
-                  <div class="blackout-98"/>
-                </div>
-              </a>
-              <a href="#asdf" class="box-98 swiper-slide noText">
-                <div class="relative text-white disableSelect">
-                  <Img fields={this.props.slide} addClass="wide rounded" dataAction=""/>
-                  <p class="smallest uppercase bold title-slide-98 opacity-8">Exhibition</p>
-                  <h4 class="small subtitle-slide-98">South Korean Artist: The Origin of Creativity</h4>
-                  <div class="blackout-98"/>
-                </div>
-              </a>
+            );})}
+
             </div>
             
             <div class="swiper-pagination ae-3"/>

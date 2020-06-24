@@ -18,7 +18,7 @@ class Slide34 extends React.Component {
           <ul class="flex verticalCenter reverse">
             <li class="col-6-12 left middle">
               <div class="fix-5-12 toLeft margin-left-tablet-auto margin-right-tablet-auto">
-                <Heading fields={this.props.slide} addClass="margin-bottom-2"/>
+                <Heading fields={this.props.slide} addClass="margin-bottom-2 ae-1"/>
                 <Text fields={this.props.slide} addClass="ae-2 fromLeft large margin-bottom-4"/>
                 <ButtonA fields={this.props.slide} addClass="cropLeft wideForPhone"/><ButtonB fields={this.props.slide}/>
               </div>

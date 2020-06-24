@@ -16,7 +16,7 @@ class Slide32 extends React.Component {
         <div class="fix-12-12">
           <ul class="flex reverse">
             <li class="col-6-12 left cell-32">
-              <Heading fields={this.props.slide} addClass="margin-bottom-2"/>
+              <Heading fields={this.props.slide} addClass="margin-bottom-2 ae-1"/>
               <Text fields={this.props.slide} addClass="ae-3 larger light margin-bottom-3"/>
               <ul class="items-32">
               {this.props.slide.list.map(function(item, index){

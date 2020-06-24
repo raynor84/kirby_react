@@ -11,7 +11,7 @@ class Slide42 extends React.Component {
     <div class="container">
       <div class="wrap">
       
-        <Heading fields={this.props.slide} addClass=""/>
+        <Heading fields={this.props.slide} addClass="ae-1"/>
         <div class="form-42 margin-top-3 center">
           <div class="pad shadow selected left ae-3">
             <form class="slides-form wide" action="#" autocomplete="off">

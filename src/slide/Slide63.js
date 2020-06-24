@@ -18,8 +18,9 @@ class Slide63 extends React.Component {
           <Text fields={this.props.slide} addClass="larger light ae-2"/>
           <ul class="flex left margin-top-4">
           {this.props.slide.list.map(function(fields, index) { 
+            let ae = index +3;
                 return (
-            <li class="col-6-12 margin-bottom-1 ae-3">
+            <li class={"col-6-12 margin-bottom-1 ae-"+ae}>
               <Heading addClass="margin-top-1 margin-bottom-1" fields={fields} />
               <BlockText addClass="opacity-8" fields={fields} />
             </li>

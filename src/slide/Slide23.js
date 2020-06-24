@@ -12,7 +12,7 @@ class Slide23 extends React.Component {
       <div class="wrap">
         
         <Text fields={this.props.slide} addClass="largest light margin-bottom-1 ae-1"/>
-        <Heading fields={this.props.slide} addClass=""/>
+        <Heading fields={this.props.slide} addClass="ae-2"/>
       
       </div>
     </div>

@@ -5,10 +5,9 @@ import Img from './fields/Img';
 class Slide22 extends React.Component {
 
 	render() {
-    let i=0;
     let dots = [];
     for(let i=0; i<this.props.slide.gallery.length; i++) {
-      if(i==0) {
+      if(i===0) {
         dots.push(<li class="dot selected"></li>);
       } else {
         dots.push(<li class="dot"></li>);
@@ -22,7 +21,7 @@ class Slide22 extends React.Component {
         
       
         <div class="fix-7-12">
-          <Heading fields={this.props.slide} addClass=""/>
+          <Heading fields={this.props.slide} addClass="ae-1"/>
 
           
           <ul class="slider rounded margin-top-4 autoHeight clickable shadow ae-1" data-slider-id="22-22">

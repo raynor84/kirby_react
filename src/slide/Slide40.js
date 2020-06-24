@@ -13,7 +13,7 @@ class Slide40 extends React.Component {
         
         <div class="fix-6-12 toLeft left ae-1">
           <BlockText fields={this.props.slide} addClass="opacity-7 large margin-bottom-2"/>
-          <Heading fields={this.props.slide} addClass="crop"/>
+          <Heading fields={this.props.slide} addClass="crop ae-1"/>
         </div>
 
       </div>

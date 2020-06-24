@@ -13,7 +13,7 @@ class Slide96 extends React.Component {
       <div class="wrap padding-top-phablet-5">
 
         <div class="fix-8-12 toCenter margin-bottom-5">
-          <Heading fields={this.props.slide} addClass=""/>
+          <Heading fields={this.props.slide} addClass="ae-1"/>
         </div>
         <div class="fix-12-12">
           <ul class="flex later equal left">

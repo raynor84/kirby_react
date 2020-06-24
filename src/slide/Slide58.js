@@ -3,7 +3,6 @@ import Section from './Section';
 import Heading from './fields/Heading';
 import Text from './fields/Text';
 import RteText from './fields/RteText';
-var parse = require('html-react-parser');
 class Slide58 extends React.Component {
 
 	render() {

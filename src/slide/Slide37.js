@@ -11,7 +11,7 @@ class Slide37 extends React.Component {
       <div class="wrap">
         
         <div class="fix-8-12">
-          <Heading fields={this.props.slide} addClass=""/>
+          <Heading fields={this.props.slide} addClass="ae-1"/>
         </div>
              
       </div>

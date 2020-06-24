@@ -2,7 +2,6 @@ import React from 'react';
 import Section from './Section';
 import Heading from './fields/Heading';
 import Text from './fields/Text';
-import Text2 from './fields/Text2';
 
 class Slide30 extends React.Component {
 
@@ -25,7 +24,7 @@ class Slide30 extends React.Component {
               let ae = index +3;
 
               return (<li key={item._uid} class={"col-3-12 margin-bottom-1 left ae-"+ae}>
-                <Heading key={index} fields={item} />
+                <Heading key={index} fields={item} addClass="" />
                 <Text  key={index+"A"} addClass="small " fields={item} />
               </li>);
             })

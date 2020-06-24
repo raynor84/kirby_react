@@ -17,11 +17,11 @@ class Slide59 extends React.Component {
           <Text fields={this.props.slide} addClass="larger light ae-2"/>
           <div class="pad padding-4 padding-phablet-3 padding-phone-2 shadow left ae-3 pad-59 margin-top-4">
             <div class="ae-3">
-                {this.props.slide.rtetext.map(function(content, index) {
+                {this.props.slide.rtetext.map(function(content, index, elements) {
                   if(index===0) {
-                    return <RteText content={content} index={index} addClass="margin-top-0 margin-bottom-2 "/>
+                    return <RteText key={index} content={content} index={index} elements={elements} addClass="margin-top-0 margin-bottom-2 "/>
                   }
-                  return <RteText content={content} index={index} addClass="margin-top-3 margin-bottom-2"/>
+                  return <RteText key={index} content={content} index={index} elements={elements}  addClass="margin-top-3 margin-bottom-2"/>
                 })}
             </div>
           </div>

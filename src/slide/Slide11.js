@@ -14,7 +14,7 @@ class Slide11 extends React.Component {
       <div class="wrap">
       
         <div class="fix-8-12">
-          <Heading fields={this.props.slide} addClass="margin-bottom-2"/>
+          <Heading fields={this.props.slide} addClass="margin-bottom-2 ae-1"/>
           <Text fields={this.props.slide} addClass="ae-2 large margin-bottom-2"/>
           <ButtonA fields={this.props.slide}/>
           <ButtonB fields={this.props.slide}/>

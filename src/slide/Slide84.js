@@ -3,7 +3,6 @@ import Section from './Section';
 import Heading from './fields/Heading';
 import Text from './fields/Text';
 import ButtonA from './fields/ButtonA';
-import ButtonB from './fields/ButtonB';
 
 class Slide84 extends React.Component {
 
@@ -25,17 +24,15 @@ class Slide84 extends React.Component {
               style={"background": "#f5fbfe"};
             }
             return (
-              <li class="col-3-12 ae-3" style={style}>
+              <li class={"col-3-12 ae-"+ae} style={style}>
               <Heading addClass="margin-bottom-1" fields={fields} />
-              <div class="price ae-5"><span class="currency">{fields.currency}</span>{fields.price}</div>
-              <div class="ae-5">
+              <div class={"price ae-"+(ae+2)}><span class="currency">{fields.currency}</span>{fields.price}</div>
+              <div class={"ae-"+(ae+2)}>
                 <Text fields={fields} addClass="smallest uppercase bolder opacity-4"/>
               </div>
-              <div class="margin-top-3 margin-bottom-3 equalElement ae-6">
+              <div class={"margin-top-3 margin-bottom-3 equalElement ae-"+(ae+2)}>
                 <ul class="p small">
                 {fields.list.map(function(fields, index) {
-                let ae=parseFloat(index)+parseFloat(3);
-                console.log(fields.strong);
                 if(fields.strong.includes("Hervorheben")) {
                   return (
                     <li><strong>{fields.text}</strong></li>
