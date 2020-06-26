@@ -4,6 +4,8 @@ import Heading from './fields/Heading';
 import Text from './fields/Text';
 import BlockText from './fields/BlockText';
 import PopupButton from './fields/PopupButton';
+import { Link } from "react-router-dom";
+
 class Slide71 extends React.Component {
 
 	render() {
@@ -24,11 +26,11 @@ class Slide71 extends React.Component {
             let ae = index + 3;
             return (
             <li class={"col-4-12 ae-"+ae}>
-              <a href={typeof fields.url[0] === "object" ? fields.url[0].link : undefined} class="cell-71 rounded equalElement" nofollow={fields.follow} target={fields.target}>
+              <Link to={typeof fields.url[0] === "object" ? fields.url[0].link : undefined} class="cell-71 rounded equalElement" nofollow={fields.follow} target={fields.target}>
                   <i class="material-icons">{fields.material_icon}</i>
                   <Heading addClass="margin-bottom-1" fields={fields} />
                   <BlockText addClass="small opacity-8" fields={fields} />
-              </a>
+              </Link>
             </li>
             );
           })}

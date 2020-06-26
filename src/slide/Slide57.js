@@ -1,6 +1,8 @@
 import React from 'react';
 import Section from './Section';
 import Heading from './fields/Heading';
+import { Link } from "react-router-dom";
+
 class Slide57 extends React.Component {
 
 	render() {
@@ -23,7 +25,7 @@ class Slide57 extends React.Component {
               <li class={"col-4-12 ae-"+ae}>
                 <div class="fix-3-12 equalElement">
                   <Heading fields={fields} addClass="smallest bold uppercase opacity-4 margin-top-3 margin-bottom-2"/>
-                  <a class="p opacity-8" href={typeof fields.url[0] ==="object" && fields.url[0] !== undefined ? fields.url[0].link:""}>{fields.text}</a>
+                  <Link class="p opacity-8" to={typeof fields.url[0] ==="object" && fields.url[0] !== undefined ? fields.url[0].link:""}>{fields.text}</Link>
                 </div>
               </li>
               );

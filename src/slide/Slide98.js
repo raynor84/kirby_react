@@ -4,6 +4,7 @@ import Text from './fields/Text';
 import Heading from './fields/Heading';
 import Img from './fields/Img';
 import "../css/swiper.min.css";
+import { Link } from "react-router-dom";
 
 class Slide98 extends React.Component {
 
@@ -20,14 +21,14 @@ class Slide98 extends React.Component {
             {this.props.slide.list.map(function(fields, index) { 
             
             return (
-              <a key={index} href={typeof fields.url[0] === "object" ? fields.url[0].link : undefined} nofollow={fields.follow} target={fields.target} class="box-98 swiper-slide noText">
+              <Link href={typeof fields.url[0] === "object" ? fields.url[0].link : undefined} nofollow={fields.follow} target={fields.target} key={index} class="box-98 swiper-slide noText">
                 <div class="relative text-white disableSelect">
                   <Img fields={fields} addClass="wide rounded" dataAction=""/>
                   <Text fields={fields} addClass="smallest uppercase bold title-slide-98 opacity-8"/>
                   <Heading addClass="subtitle-slide-98" fields={fields}/>
                   <div class="blackout-98"/>
                 </div>
-              </a>
+              </Link>
             );})}
 
             </div>

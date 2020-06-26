@@ -4,6 +4,8 @@ import Heading from './fields/Heading';
 import Text from './fields/Text';
 import TextBlock from './fields/BlockText';
 import Img from './fields/Img';
+import { Link } from "react-router-dom";
+
 class Slide46 extends React.Component {
 
 	render() {
@@ -23,12 +25,12 @@ class Slide46 extends React.Component {
           {this.props.slide.list.map(function(fields, index) {
             return (
             <li key={index} class="col-4-12 box-46">
-            <a href={typeof fields.url[0]==="object" ? fields.url[0].link: undefined} class="button empty shadow rounded crop ae-3 done" nofollow={fields.follow} target={fields.target}>
+            <Link to={typeof fields.url[0]==="object" ? fields.url[0].link: undefined} class="button empty shadow rounded crop ae-3 done" nofollow={fields.follow} target={fields.target}>
                 <Img 
                   addClass="rounded" 
                   fields={fields}
                   />
-            </a>
+            </Link>
             <Heading fields={fields} addClass="margin-top-3 margin-bottom-1 ae-4"/>
           
               <div class="ae-5"><TextBlock fields={fields} /></div>

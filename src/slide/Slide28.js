@@ -8,7 +8,8 @@ class Slide28 extends React.Component {
 
 	render() {
 		return (
-<React.Fragment>
+
+ <React.Fragment>
   <Section slide={this.props.slide}>
     <div class="container">
       <div class="wrap">

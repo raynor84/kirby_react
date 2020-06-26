@@ -4,6 +4,8 @@ import Heading from './fields/Heading';
 import Text from './fields/Text';
 import BlockText from './fields/BlockText';
 import ButtonA from './fields/ButtonA';
+import { Link } from "react-router-dom";
+
 class Slide100 extends React.Component {
 
 	render() {
@@ -31,10 +33,10 @@ class Slide100 extends React.Component {
               <h3 class="ae-2 smallest margin-bottom-3">{this.props.slide.posts_title}</h3>
               {this.props.slide.list.map(function(fields, index) { 
               return (  
-              <a key={index} href={typeof fields.url[0] === "object" ? fields.url[0].link : undefined} nofollow={fields.follow} target={fields.target} class="item-100 rounded margin-bottom-2">
+              <Link href={typeof fields.url[0] === "object" ? fields.url[0].link : undefined} nofollow={fields.follow} target={fields.target} key={index} class="item-100 rounded margin-bottom-2">
                 <Heading fields={fields} addClass="margin-bottom-1" />
                 <BlockText fields={fields} addClass="smallest uppercase bold opacity-8 cropBottom" />
-              </a>
+              </Link>
               ); })}
             </li>
           </ul>

@@ -1,78 +1,36 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import AnimationLoader from './class/AnimationLoader.js'
-import base64 from 'base-64';
-import DynamicClass from './class/DynamicClass';
+import AnimationLoader from './class/AnimationLoader.js';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Error from "./Error";
+import Home from "./Home";
+
+import "zoom-vanilla.js/dist/zoom-vanilla.min.js"
 import './css/styles.scss?509341';
-import offlinedata from './data.json';
+
 
 class App extends React.Component {
-  state = {
-    page: [],
-    example: []
-  }
-  
-
-
-  componentDidMount() {
-
-    var url_string = window.location.href;
-    //
-    console.log(url_string);
-    var myurl = new URL(url_string);
-    
-    let url ="";
-    url_string = myurl.pathname.slice(myurl.pathname.indexOf("pages"));
-    console.log(url_string);
-    if(url_string!=="/") {
-      url = "http://localhost/kirby/api"+  myurl.pathname;
-
-    } else {
-      url = "http://localhost/kirby/api/pages/test";
-    }
-  
-
-    let headers = new Headers();
-    headers.append('Content-Type', 'application/json');
-    headers.append('Accept', 'application/json');
-  	headers.append('Authorization', 'Basic ' + base64.encode('rest@restapi.com:VHQxdcEFiPQhXiutcmtn4wpf'));
-    headers.append('Origin','http://localhost:3000');
-    fetch(url, {
-      mode: 'cors',
-      credentials: 'include',
-      headers: headers,
-    })
-    .then(res => res.json())
-    .then((data) => {
-      this.setState({ page: data.data.content.slides });
-      this.setState({example: data});
-
-    })
-    .catch((error) => {
-      console.log(error);
-      this.setState({ page: offlinedata.data.content.slides });
-    })
-    
-
-    //Load Animation-Scripts after it has been loaded
-    new AnimationLoader();
-  }
-  render() {
-    console.log(this.state);
-    let slides;
-    if(Array.isArray(this.state.page)) {
-       slides = this.state.page.map(function(slide) {
-        const slideTag = slide._key.charAt(0).toUpperCase() + slide._key.slice(1);
-        return React.createElement(new DynamicClass(slideTag) , {key: slide._key, slide: slide}, '');
-    });
-
-    }
-
+        
+       
+ render() {
+   //Load Animation-Scripts after it has been loaded
+  //new AnimationLoader();
+  console.log("test");
     return (
-      <React.Fragment>
-        {slides}
-      </React.Fragment>
+      <Router>
+      <Switch>
+      <Route exact path="/">
+        <Home />
+      </Route>
+      <Route path="/pages/:slug">
+        <Home />
+      </Route>
+      <Route>
+        <Error />
+      </Route>
+    </Switch>
+    </Router>
     );
 }
 }

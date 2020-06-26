@@ -4,6 +4,8 @@ import Heading from './fields/Heading';
 import Text from './fields/Text';
 import BlockText from './fields/BlockText';
 import Img from './fields/Img';
+import { Link } from "react-router-dom";
+
 class Slide66 extends React.Component {
 
 	render() {
@@ -23,9 +25,9 @@ class Slide66 extends React.Component {
             let ae = index +3;
                 return (
             <li class="col-4-12 margin-top-5">
-              <a href={typeof fields.url[0]==="object" ? fields.url[0].link: undefined} class="button empty rounded shadow margin-bottom-1 ae-3 done" nofollow={fields.follow} target={fields.target}>
+              <Link to={typeof fields.url[0]==="object" ? fields.url[0].link: undefined} class="button empty rounded shadow margin-bottom-1 ae-3 done" nofollow={fields.follow} target={fields.target}>
                   <Img fields={fields} addClass="wide" />
-              </a>  
+              </Link>  
               <Heading fields={fields} addClass={"margin-top-1 ae-"+(ae+1)} />
               <div class="margin-top-1 ae-5"><BlockText addClass="small opacity-8" fields={fields} /></div>
             </li>

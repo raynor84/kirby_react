@@ -23,7 +23,7 @@ class RteText extends React.Component {
             for(let i=index; i<elements.length; i++) {
                 
                 if(elements[i].type===type) {
-                    li.push(<li>{parse(elements[i].content)}</li>);
+                    li.push(<li key={i}>{parse(elements[i].content)}</li>);
                 } else {
                     break;
                 }

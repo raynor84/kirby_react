@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from "react-router-dom";
 
 class ButtonA extends React.Component {
 
@@ -17,7 +17,7 @@ class ButtonA extends React.Component {
             left_text = this.props.fields.buttona_text;
         }
         return (
-            (this.props.fields.buttona_text || this.props.fields.buttona_material_icon) && <a class={"button rounded ae-5 fromCenter " + this.props.fields.buttona_stil+" "+this.props.fields.buttona_farbe+" "+this.props.fields.buttona_groesse+" "+this.props.addClass} href={link} nofollow={this.props.fields.buttona_nachverfolgung} target={this.props.fields.buttona_fenster}>{left_text} {this.props.fields.buttona_material_icon ? <span class="material-icons"> {this.props.fields.buttona_material_icon } </span>: ""}{right_text} </a>
+            (this.props.fields.buttona_text || this.props.fields.buttona_material_icon) && <Link class={"button rounded ae-5 fromCenter " + this.props.fields.buttona_stil+" "+this.props.fields.buttona_farbe+" "+this.props.fields.buttona_groesse+" "+this.props.addClass} to={link} nofollow={this.props.fields.buttona_nachverfolgung} target={this.props.fields.buttona_fenster}>{left_text} {this.props.fields.buttona_material_icon ? <span class="material-icons"> {this.props.fields.buttona_material_icon } </span>: ""}{right_text} </Link>
         );
     }
 }

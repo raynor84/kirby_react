@@ -4,6 +4,8 @@ import Heading from './fields/Heading';
 import Text from './fields/Text';
 import BlockText from './fields/BlockText';
 import Img from './fields/Img';
+import { Link } from "react-router-dom";
+
 class Slide74 extends React.Component {
 
 	render() {
@@ -24,7 +26,7 @@ class Slide74 extends React.Component {
             let ae = index + 3;
             return (
             <li class={"col-3-12 col-tablet-1-2 col-phablet-1-1 fromCenter ae-"+ae}>
-              <a href={typeof fields.url[0] === "object" ? fields.url[0].link : undefined} class="box-74" nofollow={fields.follow} target={fields.target}>
+              <Link to={typeof fields.url[0] === "object" ? fields.url[0].link : undefined} class="box-74" nofollow={fields.follow} target={fields.target}>
                 <div class="thumbnail-74">
                   <Img fields={fields} addClass="wide" dataAction=""/>
                 </div>
@@ -34,7 +36,7 @@ class Slide74 extends React.Component {
                   <BlockText addClass="small cropBottom opacity-8" fields={fields} />
                   </div>
                 </div>
-              </a>
+              </Link>
             </li>
             );
           })}
