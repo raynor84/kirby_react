@@ -28,7 +28,7 @@ class Slide22 extends React.Component {
             {
            
             this.props.slide.gallery.map(function(image, index) {
-            return <li class={index== 0 ? "wide selected": "wide"}><Img key={index} imageField={image} addClass="wide" dataAction=""/></li>
+            return <li class={index=== 0 ? "wide selected": "wide"}><Img key={index} imageField={image} addClass="wide" dataAction=""/></li>
             })}
           </ul>
         

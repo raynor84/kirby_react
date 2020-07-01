@@ -31,8 +31,7 @@ class Slide83 extends React.Component {
               <div class={"margin-top-3 margin-bottom-3 equalElement ae-"+(ae+3)}>
                 <ul class="p small">
                 {fields.list.map(function(fields, index) {
-                let ae=parseFloat(index)+parseFloat(3);
-                console.log(fields.strong);
+
                 if(fields.strong.includes("Hervorheben")) {
                   return (
                     <li><strong>{fields.text}</strong></li>

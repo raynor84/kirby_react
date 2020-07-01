@@ -1,27 +1,31 @@
 import React from 'react';
-import {
-    useLocation
-  } from "react-router-dom";
 
 class fetchURL extends React.Component {
-
+    websites = {
+      "mysite.localhost": "http://localhost/my-site.com",
+      "localhost": "http://localhost/kirby"
+    }
     getKirbyFetch() {
-        console.log(this.props)
-        var url_string = window.location.href;
-        var currentLocation = window.location.pathname;
-        console.log(currentLocation);
+
+      var url_string = window.location.href;
+
         var myurl = new URL(url_string);
-        //let location = useLocation();
-        //console.log(location.pathname);
         let url ="";
         console.log(myurl);
         url_string = myurl.pathname.slice(myurl.pathname.indexOf("pages"));
-        
+        var site = "";
+        for(const key of Object.keys(this.websites)) {
+          console.log(key);
+          if(key===myurl.hostname) {
+            site= this.websites[key];
+          }
+        }
+        console.log(site);
         if(url_string!=="/") {
-          url = "http://"+myurl.hostname+"/kirby/api"+  myurl.pathname;
+          url = site+"/api"+  myurl.pathname;
     
         } else {
-          url = "http://"+myurl.hostname+"/kirby/api/pages/test";
+          url = site + "/api/pages/test";
         }
         return url
     }

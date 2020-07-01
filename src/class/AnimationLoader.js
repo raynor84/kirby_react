@@ -9,11 +9,9 @@ class AnimationLoader {
     }
 
     renderAfterReactBuild(callback) {
-        console.log("renderAfterReactBuild");
         setTimeout(function () {
-            console.log("setTimeout");
             callback();
-        }, 0);
+        }, 2000);
     }
 
     //Load One Script than wait till Loaded, than append other script
@@ -55,7 +53,7 @@ class AnimationLoader {
     }
 
     unloadScripts() {
-
+        window.pluginsAttached = 0;
         let elem=document.getElementById("jquery");
         if(elem) {
             elem.parentNode.removeChild(elem);

@@ -1,26 +1,50 @@
+<script>document.write('<base href="http://localhost:3000" />');</script>
 <?php
-function arrayToObject(array $array, $className) {
-    return unserialize(sprintf(
-        'O:%d:"%s"%s',
-        strlen($className),
-        $className,
-        strstr(serialize($array), ':')
-    ));
-}
-class JsonContent extends Kirby\Cms\Content {
-    public function test() {
-        echo "test";
-    }
-}
+
 $object = (array)$data;
-//$object = arrayToObject($data, "JsonContent");
-//$object->test();
+
+$ersetzung = array("\u0000", "*");
+
+reset($object);
+$first_key = key($object);
+$object = $object[$first_key];
+$mykey = $object["_key"];
+ 
+//$key = $object["_key"];
+foreach ($object as $key => $el) {
+    if (is_array($el)&&(!empty($el))) {
+        foreach($el as $image_key => $value) {
+            $img = $value;
+            $object[$key][$image_key] = array();
+            $object[$key][$image_key]["url"] =  $page->image($img)->url();
+        }
+    }
+  }
 $json = json_encode($object);
 ?>
-<script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
-<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
 
+
+<iframe src="http://localhost:3000/extension" style="width:100%; height:500px;" id="<?= $mykey; ?>" class="preview"></iframe>
 <script type="text/javascript">
-    import Slide09 from "./slide/Slide09";
-    ReactDOM.render(React.createElement(Slide09, { slide: "<?php echo $json; ?>" }), document.body);
+
+
+var myIframe = document.getElementById('<?= $mykey; ?>');
+ 
+window.addEventListener("message", resizeIframe, false);
+function resizeIframe(e) {
+    console.log(e);
+    if(e.data==="0px") {
+        myIframe.style.height = "500px";
+    } else {
+        myIframe.style.height = e.data;
+    }
+}
+
+myIframe.addEventListener("load", function(e) {
+    let json = {};
+    json = <?= $json; ?>;
+
+    myIframe.contentWindow.window.postMessage(json, "*");
+});
+
 </script>

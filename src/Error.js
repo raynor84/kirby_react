@@ -1,12 +1,16 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 
-class Error extends React.Component {
+import AnimationLoader from './class/AnimationLoader'
 
+class Error extends React.Component {
+  componentDidMount() {
+    new AnimationLoader();
+  }
   
     render() {
             return (
-                <section class="slide fade-6 kenBurns fromRight selected active animate">
+<section class="slide fade-6 kenBurns fromRight selected active animate">
   <div class="content">
     <div class="container">
       <div class="wrap">

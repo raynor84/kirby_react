@@ -6,7 +6,6 @@ import AnimationLoader from './class/AnimationLoader.js';
 
 import React from 'react';
 
-import {withRouter} from 'react-router-dom';
 
 
 class Home extends React.Component {
@@ -14,18 +13,16 @@ class Home extends React.Component {
         page: [],
         settings: {}
       }
-      constructor(props) {
-        super(props);
-      }
+
     componentDidMount() {
         //Load AnimationsScripts
-        window.pluginsAttached = 0;
+        
         new AnimationLoader();
         this.fetchState();
       }
       componentDidUpdate(prevProps, prevState, snapshot) {
         if (this.props.location.pathname !== prevProps.location.pathname) {
-            window.pluginsAttached = 0;
+            
             this.fetchState();
             new AnimationLoader();
         }
@@ -57,20 +54,30 @@ class Home extends React.Component {
         })
     }
     render() {
-        
-        console.log(this.state);
-        document.body.classList.add(this.state.settings.animation);
-        document.body.classList.add(this.state.settings.speed);
-        document.body.classList.add(this.state.settings.easing);
-        document.body.classList.add(this.state.settings.animate_elements);
-        document.body.classList.add(this.state.settings.direction);
-        document.body.classList.add(this.state.settings.scrolltype);
+        if(this.state.settings.animation) {
+          document.body.classList.add(this.state.settings.animation);
+        }
+        if(this.state.settings.speed) {
+          document.body.classList.add(this.state.settings.speed);
+        }
+        if(this.state.settings.easing) {
+          document.body.classList.add(this.state.settings.easing);
+        }
+        if(this.state.settings.animate_elements) {
+          document.body.classList.add(this.state.settings.animate_elements);
+        }
+        if(this.state.settings.direction) {
+          document.body.classList.add(this.state.settings.direction);
+        }
+        if(this.state.settings.scrolltype) {
+          document.body.classList.add(this.state.settings.scrolltype);
+        }
         let slides;
         if(Array.isArray(this.state.page)) {
            slides = this.state.page.map(function(slide, index) {
             const slideTag = slide._key.charAt(0).toUpperCase() + slide._key.slice(1);
             return React.createElement(new DynamicClass(slideTag) , {key: slide._key+index, slide: slide}, '');
-        });
+          });
     
         }
             return (
@@ -80,4 +87,4 @@ class Home extends React.Component {
             );  
     }
 }
-export default withRouter(props => <Home {...props}/>);
+export default Home;

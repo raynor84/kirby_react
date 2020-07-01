@@ -22,7 +22,7 @@ class Slide16 extends React.Component {
             </li>
             <li class="col-1-12"/>
             <li class="col-6-12">
-              <VideoThumbnail fields={this.props.slide} popupid="16-16"/>
+              <VideoThumbnail fields={this.props.slide} popupid="16"/>
             </li>
           </ul>
         </div>
@@ -30,7 +30,7 @@ class Slide16 extends React.Component {
 
     </div>
   </Section>
-  <div class="popup autoplay" data-popup-id="16-16">
+  <div class="popup autoplay" data-popup-id="16">
   <div class="close"><svg><use xmlnsXlink="http://www.w3.org/1999/xlink" xlinkHref="#close"/></svg></div>
   <div class="content">
     <div class="container">

@@ -27,12 +27,12 @@ class Slide27 extends React.Component {
           <ul class="flex verticalCenter">
             <li class="col-5-12 cell-27">
               <div class="fix-4-12">
-                <ul class="slider clickable ae-1 fromAbove" data-slider-id="27-27">
+                <ul class="slider clickable ae-1 fromAbove" data-slider-id="27">
                 {this.props.slide.gallery.map(function(image, index) {
                 return <li class={index=== 0 ? "selected": ""}><Img key={index} imageField={image} addClass="" dataAction=""/></li>
                 })}
                 </ul>
-                <ul class="controller dots margin-top-3 ae-2 fromCenter" data-slider-id="27-27">
+                <ul class="controller dots margin-top-3 ae-2 fromCenter" data-slider-id="27">
                   {dots}
                 </ul>
               </div>

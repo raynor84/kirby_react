@@ -22,7 +22,7 @@ class Slide28 extends React.Component {
               <ButtonA fields={this.props.slide}/>
             </li>
             <li class="col-5-12 cell-28 ae-1">
-              <Img fields={this.props.slide} addClass="iphone-28" dataAction="zoom"/>
+              <Img fields={this.props.slide} addClass="iphone-28" dataAction="zoomIMG"/>
             </li>
           </ul>
         </div>
